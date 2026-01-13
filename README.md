@@ -5,16 +5,16 @@ The goal of this project is to automate standard system administration tasks on 
 
 🛠️ Curriculum & Key Topics
 Section	Topic	Core Properties & Modules Covered
-01	Ansible Intro & Install	ansible-core installation, Control Node vs. Managed Hosts.
-02	Core Mechanics	Static/Dynamic Inventories, ansible.cfg, YAML syntax, ansible-playbook.
-03	Data Management	Variable precedence, ansible-vault (secrets), ansible_facts.
-04	Task Control	loop, when conditionals, handlers, block/rescue/always.
-05	File Manipulation	copy, fetch, lineinfile, blockinfile, Jinja2 Templates.
-06	Large Projects	Host patterns (regex), import_playbook, include_tasks.
-07	Ansible Roles	ansible-galaxy, Role directory structure, Content Collections.
-08	Troubleshooting	debug module, --check mode, ansible-lint, log analysis.
-09	System Automation	yum/dnf, user, parted, nmcli, firewalld, systemd.
-10	Comprehensive Review	End-to-end deployment of multi-tier applications.
+1. Ansible Intro & Install	ansible-core installation, Control Node vs. Managed Hosts.
+2. Core Mechanics	Static/Dynamic Inventories, ansible.cfg, YAML syntax, ansible-playbook
+3. Data Management	Variable precedence, ansible-vault (secrets), ansible_facts.
+4. Task Control	loop, when conditionals, handlers, block/rescue/always.
+5. File Manipulation	copy, fetch, lineinfile, blockinfile, Jinja2 Templates.
+6. Large Projects	Host patterns (regex), import_playbook, include_tasks.
+7. Ansible Roles	ansible-galaxy, Role directory structure, Content Collections.
+8. Troubleshooting	debug module, --check mode, ansible-lint, log analysis.
+9. System Automation	yum/dnf, user, parted, nmcli, firewalld, systemd.
+10. Comprehensive Review	End-to-end deployment of multi-tier applications.
 
 🚀 Key Features Demonstrated
 
