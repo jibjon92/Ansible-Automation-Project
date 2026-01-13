@@ -1,0 +1,40 @@
+---
+- name: Preparing servers
+  hosts: servers
+  tasks:
+    - name: Fetch the /var/log/secure log file from managed hosts
+      ansible.builtin.fetch:
+        src: /var/log/secure
+        dest: secure-backups
+
+
+    - name: nsure the /home/devops/files directory exists
+      ansible.builtin.file:
+        path: /home/devops/files
+        state: directory
+        owner: devops
+        group: devops
+        mode: 0775
+        setype: samba_share_t
+
+    - name: Copy a file to managed hosts and set ownership and permissions
+      ansible.builtin.copy:
+        src: system
+        dest: /home/devops/files/
+        owner: devops
+        group: devops
+        mode: 0664
+
+    - name: Add a block of text to an existing file
+      ansible.builtin.blockinfile:
+        path: /home/devops/files/users.txt
+        block: |
+          This block of text consists of two lines.
+          They have been added by the Jibin again for the second time
+        state: present
+
+    - name: Insert 'Jibin is working' at the beginning of users.txt
+      ansible.builtin.lineinfile:
+        path: /home/devops/files/users.txt
+        line: 'Jibin is working'
+        insertbefore: BOF # Ensures placement at the Beginning Of File

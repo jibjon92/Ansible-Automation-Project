@@ -1,0 +1,257 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c7f0b8809606e3b308cc3755a770d3512c18f68762dad95a152620534e5d78e",
+   "format": 1
+  },
+  {
+   "name": "docs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c82ee692702ec1dd604cdbc38ff252114e5204e1b0627045a66c9451e7a918ac",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/newping.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7b416c7c657946697d4fd7696fed797fd304c1a22c841ed0a059ba43769b5cba",
+   "format": 1
+  },
+  {
+   "name": "roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/backup",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/backup/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1953bd7a3b42b205957f1d1d365d32918c57c2740c2b3bea3aeeae33b09a4e06",
+   "format": 1
+  },
+  {
+   "name": "roles/backup/tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/backup/tests/ansible.cfg",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "49231b3d85f145db7c4c7c8c01d8dcccfe6f02a8b2946b721cd1e8e844bc7620",
+   "format": 1
+  },
+  {
+   "name": "roles/backup/tests/inventory",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0ae486a963924b45df018f294ccc57b26c2ea911f20051aea6b7f465fd4f095d",
+   "format": 1
+  },
+  {
+   "name": "roles/backup/tests/test.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "502be24fc8628e1d502c853fa108700f0eaf91214166ea34d641b8ada20acde6",
+   "format": 1
+  },
+  {
+   "name": "roles/backup/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/backup/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8f7909f8ec0716530d5f260bf48019331d911c5b3ba8b4e651a1f547dd88d94e",
+   "format": 1
+  },
+  {
+   "name": "roles/backup/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/backup/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "abb2e2de23f25080896d1455d94b8e2d1880526ed024390bdf165a23a0ad9c31",
+   "format": 1
+  },
+  {
+   "name": "roles/backup/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/backup/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5398077b708fd6d4f0e79d49a1cd8188c8454090335f95b71578c1e2f58122ee",
+   "format": 1
+  },
+  {
+   "name": "roles/backup/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/backup/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6d4525ec51ff9175caa75fb9de6ee3839fb3f4a98cb816f45e0ea42871baf34c",
+   "format": 1
+  },
+  {
+   "name": "roles/restore",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/restore/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/restore/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c90e5876b9bb35252a0a2bc429fd6823f536a88fc1313c440a9a23cc91b5e1cc",
+   "format": 1
+  },
+  {
+   "name": "roles/restore/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0a72b0ddb900f8e10a2e0f763e700e77f18ff859e498800dd91346a5a44492ed",
+   "format": 1
+  },
+  {
+   "name": "roles/restore/tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/restore/tests/ansible.cfg",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "49231b3d85f145db7c4c7c8c01d8dcccfe6f02a8b2946b721cd1e8e844bc7620",
+   "format": 1
+  },
+  {
+   "name": "roles/restore/tests/inventory",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0ae486a963924b45df018f294ccc57b26c2ea911f20051aea6b7f465fd4f095d",
+   "format": 1
+  },
+  {
+   "name": "roles/restore/tests/test.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b01cb9bf657aeb3486fceb21a204eaadd6e5ec2f3a042df0a86edde3f1a7d0ba",
+   "format": 1
+  },
+  {
+   "name": "roles/restore/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/restore/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2eebe7b8481369be8c6d256c6f5202806ba2e8cbc455ff67a84b7cb3e719b89c",
+   "format": 1
+  },
+  {
+   "name": "roles/restore/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/restore/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "abb2e2de23f25080896d1455d94b8e2d1880526ed024390bdf165a23a0ad9c31",
+   "format": 1
+  },
+  {
+   "name": "roles/restore/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/restore/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5398077b708fd6d4f0e79d49a1cd8188c8454090335f95b71578c1e2f58122ee",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

@@ -1,0 +1,24 @@
+---
+- name: Time Synchornization
+  hosts: database_servers
+
+  roles:
+    - redhat.rhel_system_roles.timesync
+
+  post_tasks:
+    - name: Get time zone
+      ansible.builtin.command: timedatectl show
+      register: current_timezone
+      changed_when: false
+
+
+    - name: Set time zone
+      ansible.builtin.command: "timedatectl set-timezone {{ host_timezone }}"
+      when: host_timezone not in current_timezone.stdout
+      notify : reboot
+
+  handlers:
+    - name: reboot host
+      ansible.builtin.reboot:
+
+     

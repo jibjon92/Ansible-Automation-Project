@@ -1,0 +1,9 @@
+---
+- name: Resolve host patterns
+  hosts: '172.25.*'
+  gather_facts: false
+  tasks:
+  - name: Display managed hosts matching the host pattern
+    ansible.builtin.debug:
+      msg: "{{ inventory_hostname }}"
+

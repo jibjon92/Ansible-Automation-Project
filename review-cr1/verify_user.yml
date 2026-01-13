@@ -1,0 +1,23 @@
+---
+- name: Verify the sam user was created
+  hosts: dev
+
+  tasks:
+
+    - name: Verify the sam user exists
+      ansible.builtin.user:
+        name: sam
+      check_mode: true
+      register: sam_check
+
+    - name: Sam was created
+      ansible.builtin.debug:
+        msg: "Sam was created"
+      when: sam_check['changed'] == false
+
+    - name: Output sam user status to file
+      ansible.builtin.lineinfile:
+        path: /home/student/verify.txt
+        line: "Sam was created"
+        create: true
+      when: sam_check['changed'] == false

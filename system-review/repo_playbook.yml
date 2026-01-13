@@ -1,0 +1,21 @@
+---
+- name: Repository Configuration
+  hosts: webservers
+  tasks:
+    - name: Ensure example repo exists
+      ansible.builtin.yum_repository:
+        name: example-internal
+        description: Example Inc. Internal YUM repo
+        file: example
+        baseurl: http://materials.example.com/yum/repository
+        gpgcheck: true
+
+    - name: Ensure Repo RPM key is installed
+      ansible.builtin.rpm_key:
+        key: http://materials.example.com/yum/repository/RPM-GPG-KEY-example
+        state: present
+
+    - name: Install rhelever package
+      ansible.builtin.dnf:
+        name: rhelver
+        state: present

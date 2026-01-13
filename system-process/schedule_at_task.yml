@@ -1,0 +1,15 @@
+---
+- name: Schedule AT task
+  hosts: webservers
+  become: true
+  become_user: devops
+
+
+  tasks:
+    - name: Create date and time file
+      ansible.posix.at:
+        command: date > ~/my_at_date_time
+        count: 1
+        units: minutes
+        unique: true
+        state: present

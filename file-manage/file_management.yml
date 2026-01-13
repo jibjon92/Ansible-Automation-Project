@@ -1,0 +1,29 @@
+---
+- name: Preparing servers
+  hosts: servers
+  tasks:
+    - name: Fetch the /var/log/secure log file from managed hosts
+      ansible.builtin.fetch:
+        src: /var/log/secure
+        dest: secure-backups
+
+    - name: Ensure the /home/devops/files directory exists
+      ansible.builtin.file:
+        path: /home/directory/files
+        state: directory
+        owner: devops
+        group: devops
+        mode: 0775
+        setype: samba_share_t
+
+    - name: Add a single line of text to a file
+      ansible.builtin.lineinfile:
+        path: /home/devops/files/users.txt
+        line: This line was added by Jibin
+        state: present
+        create: true
+        owner: devops
+        group: devops
+        mode: 0644
+
+    

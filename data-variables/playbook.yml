@@ -1,0 +1,51 @@
+---
+- name: Deploy and start Apache HTTPD service
+  hosts: webserver
+  vars:
+    web_pkg: httpd
+    firewall_pkg: firewalld
+    web_service: httpd
+    firewall_service: firewalld
+    rule: http
+  tasks:
+    - name: Required packages are installed and uptodate
+      ansible.builtin.dnf:
+        name:
+          - "{{ web_pkg }}"
+          - "{{ firewall_pkg }}"
+        state: latest
+
+    - name: The {{ firewall_service }} in started and enabled
+      ansible.builtin.service:
+        name: "{{ firewall_service }}" 
+        enabled: true
+        state: started
+
+    - name: The {{ web_service }} is started and enabled
+      ansible.builtin.service:
+        name: "{{ web_service }}"
+        enabled: true
+        state: started
+
+
+    - name: Web content is in place
+      ansible.builtin.copy:
+        content: " Example web content"
+        dest: /var/www/html/index.html
+
+    - name: The firewall port for {{ rule }} is open
+      ansible.posix.firewalld:
+        service: "{{ rule}}"
+        permanent: true
+        immediate: true
+        state: enabled
+
+- name: Verfiy the Apache service
+  hosts: workstation
+  become: false
+  tasks:
+    - name: Ensure the webserver is reachable
+      ansible.builtin.uri:
+        url: http://servera.lab.example.com
+        status_code: 200  
+

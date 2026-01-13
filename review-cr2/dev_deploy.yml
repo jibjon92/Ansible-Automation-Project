@@ -1,0 +1,46 @@
+---
+- name: Install and configure web servers
+  hosts: webservers
+  become: true
+
+  tasks:
+    - name: Install httpd package
+      ansible.builtin.dnf:
+        name: httpd
+        state: present
+
+    - name: Start httpd service
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: true
+
+    - name: Deploy configuration template
+      ansible.builtin.template:
+        src: templates/vhost.conf.j2
+        dest: /etc/httpd/conf.d/vhost.conf
+        owner: root
+        group: root
+        mode: '0644'
+      notify: Restart httpd
+
+    - name: Copy index.html
+      ansible.builtin.copy:
+        src: files/
+        dest: "/var/www/vhosts/{{ ansible_facts['hostname'] }}/"
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Ensure web server port is open
+      ansible.posix.firewalld:
+        state: enabled
+        permanent: true
+        immediate: true
+        service: http
+
+  handlers:
+    - name: Restart httpd
+      ansible.builtin.service:
+        name: httpd
+        state: restarted

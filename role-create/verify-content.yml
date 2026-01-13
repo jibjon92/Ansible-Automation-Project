@@ -1,0 +1,13 @@
+---
+- name: Verify the index.html file
+  hosts: servera.lab.example.com
+
+  tasks:
+
+  - name: Verify the index.html file is in place
+    ansible.builtin.command: cat /var/www/vhosts/servera/index.html
+    register: content
+
+  - name: What does the index.html config file contain
+    ansible.builtin.debug:
+      msg: '{{ content }}.stdout_lines'

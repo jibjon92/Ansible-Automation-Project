@@ -1,0 +1,8 @@
+---
+- name: Display ansible_facts
+  hosts: webserver
+  tasks:
+    - name: Display facts
+      ansible.builtin.debug:
+        var: ansible_facts
+

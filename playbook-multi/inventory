@@ -1,0 +1,9 @@
+[workstation]
+workstation.lab.example.com
+
+[servera]
+servera.lab.example.com
+
+[web:children]
+servera
+

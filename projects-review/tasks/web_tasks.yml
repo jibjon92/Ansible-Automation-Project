@@ -1,0 +1,22 @@
+---
+- name: Install and start httpd
+  ansible.builtin.import_tasks: install_and_enable.yml
+  vars:
+    package: httpd
+    service: httpd
+
+- name: Tuning configuration installed
+  ansible.builtin.copy:
+    src: files/tune.conf
+    dest: /etc/httpd/conf.d/tune.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - restart httpd
+
+- name: Deploy index page
+  ansible.builtin.copy:
+    content: |
+      This is {{ ansible_facts['fqdn'] }}.
+    dest: /var/www/html/index.html

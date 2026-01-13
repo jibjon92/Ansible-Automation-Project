@@ -1,0 +1,19 @@
+---
+- name: Change default boot target
+  hosts: webservers
+  become: true
+  gather_facts: false
+  vars:
+    default_target: "multi-user.target"
+
+  tasks:
+    - name: Get current boot target
+      ansible.builtin.command:
+        cmd: systemctl get-default
+      changed_when: false
+      register: target
+
+    - name: Set default boot target
+      ansible.builtin.command:
+        cmd: systemctl set-default {{ default_target }}
+      when: default_target not in target

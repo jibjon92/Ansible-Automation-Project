@@ -1,0 +1,37 @@
+---
+# tasks file for ansible-http
+- name: Packages are installed
+  ansible.builtin.dnf:
+    name: "{{ web_package }}"
+    state: present
+
+- name: Ensure service is started
+  ansible.builtin.service:
+    name: "{{ web_service }}"
+    state: started
+    enabled: true
+
+- name: Deploy configuration file
+  ansible.builtin.template:
+    src: templates/httpd.conf.j2
+    dest: "{{ web_config_file }}"
+    owner: root
+    group: root
+    mode: '0644'
+    setype: httpd_config_t
+  notify: Restart httpd
+
+- name: Deploy index.html file
+  ansible.builtin.copy:
+    src: files/index.html
+    dest: "{{ web_root }}"
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Web port is open
+  ansible.posix.firewalld:
+    service: "{{ web_fw_service }}"
+    permanent: true
+    state: enabled
+    immediate: true

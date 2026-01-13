@@ -1,0 +1,21 @@
+---
+- name: MariaDB is running
+  hosts: database_dev
+  vars:
+    mariadb_packages:
+      - mariadb-server
+      - python3-PyMySQL
+   
+  tasks:
+    - name: MariaDB packages are installed
+      ansible.builtin.dnf:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ mariadb_packages }}"
+
+    - name: Start the MariaDB
+      ansible.builtin.service:
+        name: mariadb
+        state: started
+        enabled: true
+

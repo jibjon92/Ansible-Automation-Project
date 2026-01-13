@@ -1,0 +1,19 @@
+---
+- name: Backup the system configuration
+  hosts: servera.lab.example.com
+  become: true
+  gather_facts: false
+
+  tasks:
+    - name: Ensure the machine is up
+      gls.utils.newping:
+        data: pong
+
+    - name: Ensure configuration files are saved
+      ansible.builtin.include_role:
+        name: gls.utils.backup
+      vars:
+        backup_id: backup_etc
+        backup_files:
+          - /etc/sysconfig
+          - /etc/yum.repos.d

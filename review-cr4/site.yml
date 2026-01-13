@@ -1,0 +1,6 @@
+---
+- name: Apply the ansible-httpd role
+  hosts: webdev
+
+  roles:
+    - ansible-http

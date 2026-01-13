@@ -1,0 +1,91 @@
+---
+# start of secure web server playbook
+- name: Create secure web service
+  hosts: webservers
+  remote_user: devops
+  become: true
+  vars:
+    random_var: "This is colon: test"
+    rule:
+      - http
+      - https
+
+  tasks:
+    - block:
+        - name: Install web server packages
+          ansible.builtin.dnf:
+            name: "{{ item }}"
+            state: latest
+          notify:
+            - Restart services
+          loop:
+            - httpd
+            - mod_ssl
+
+        - name: Install httpd config files
+          ansible.builtin.copy:
+            src: vhosts.conf
+            dest: /etc/httpd/conf.d/vhosts.conf
+            backup: true
+            owner: root
+            group: root
+            mode: 0644
+          register: vhosts_config
+          notify:
+            - Restart services
+
+        - name: Create ssl certificate
+          ansible.builtin.command: openssl req -new -nodes -x509 -subj "/C=US/ST=North Carolina/L=Raleigh/O=Example Inc/CN=serverb.lab.example.com" -days 120 -keyout /etc/pki/tls/private/serverb.lab.example.com.key -out /etc/pki/tls/certs/serverb.lab.example.com.crt -extensions v3_ca
+          args:
+            creates: /etc/pki/tls/certs/serverb.lab.example.com.crt
+
+        - name: Start and enable web services
+          ansible.builtin.service:
+             name: httpd
+             state: started
+             enabled: true
+
+        - name: Open ports for http and https
+          ansible.posix.firewalld:
+            service: "{{ item }}"
+            immediate: true
+            permanent: true
+            state: enabled
+          loop: "{{ rule }}"
+
+        - name: Deliver content
+          ansible.builtin.copy:
+            dest: /var/www/vhosts/serverb-secure/
+            src: index.html
+
+        - name: Check httpd syntax
+          ansible.builtin.command: /sbin/httpd -t
+          register: httpd_conf_syntax
+          failed_when: "'Syntax OK' not in httpd_conf_syntax.stderr"
+
+        - name: Httpd_conf_syntax variable
+          ansible.builtin.debug:
+            msg: "The httpd_conf_syntax variable value is {{ httpd_conf_syntax }}"
+
+        - name: Check httpd status
+          ansible.builtin.command: systemctl is-active httpd
+          register: httpd_status
+          changed_when: httpd_status.rc != 0
+          notify:
+            - Restart services
+
+      rescue:
+        - name: Recover original httpd config
+          ansible.builtin.file:
+            path: /etc/httpd/conf.d/vhosts.conf
+            state: absent
+          notify:
+            - Restart services
+
+  handlers:
+    - name: Restart services
+      ansible.builtin.service:
+        name: httpd
+        state: restarted
+
+# end of secure web play

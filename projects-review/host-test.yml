@@ -1,0 +1,8 @@
+---
+- name: List inventory hostnames
+  hosts: server*.lab.example.com
+  gather_facts: false
+  tasks:
+    - name: List inventory hostnames
+      ansible.builtin.debug:
+        msg: "{{inventory_hostname}}"

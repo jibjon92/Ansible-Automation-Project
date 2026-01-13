@@ -1,0 +1,17 @@
+---
+- name: Ensure the backup directory exists
+  file:
+    path: "{{ backup_dir }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0700
+
+- name: Ensure the backup exists
+  command:
+    cmd: "tar zcf {{ backup_dir }}/{{ backup_prefix }}{{ backup_id }}.tgz
+          -C / --xattrs --exclude {{ backup_prefix }}*.tgz --ignore-failed-read
+          {{ backup_files | join(' ') }}"
+    creates: "{{ backup_dir }}/{{ backup_prefix }}{{ backup_id }}.tgz"
+    warn: false
+...

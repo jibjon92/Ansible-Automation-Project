@@ -1,0 +1,19 @@
+---
+- name: Configure the system
+  hosts: servera.lab.example.com
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: Ensure the system is registered with Insights
+      ansible.builtin.include_role:
+        name: redhat.insights.insights_client
+      vars:
+        auto_config: false
+        insights_proxy: http://proxy.example.com:8080
+
+    - name: Ensure SELinux mode is Enforcing
+      ansible.builtin.include_role:
+        name: redhat.rhel_system_roles.selinux
+      vars:
+        selinux_state: enforcing

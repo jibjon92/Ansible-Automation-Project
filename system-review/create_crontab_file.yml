@@ -1,0 +1,14 @@
+---
+- name: Recurring cron job
+  hosts: webservers
+  tasks:
+    - name: Crontab file exists
+      ansible.builtin.cron:
+        name: Display disk usage
+        minute: "*/2"
+        hour: 9-16
+        weekday: 1-5
+        user: devops
+        job: df -kh >> /home/devops/disk_usage
+        cron_file: disk_usage
+        state: present

@@ -1,0 +1,18 @@
+---
+- name: Backing up network configuration files
+  hosts: nodes
+  become: true
+  gather_facts: false
+
+  tasks:
+    - include_role:
+        name: gls.utils.backup
+      vars:
+        backup_id: ge01
+        backup_files:
+          - /etc/hosts
+          - /etc/resolv.conf
+          - /etc/sysconfig/network
+          - /etc/sysconfig/network-scripts
+          - /etc/unbound/*.key
+...

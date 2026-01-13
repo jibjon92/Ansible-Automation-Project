@@ -1,0 +1,22 @@
+---
+- name: Task failure excercise
+  hosts: databases
+  vars:
+    web_package: http
+    db_package: mariadb-server
+    db_service: mariadb
+
+  tasks:
+    - name: Install {{ web_package }} package
+      ansible.builtin.dnf:
+        name : "{{ web_package }}"
+        state: present
+      ignore_errors: true
+
+    - name: Install {{ db_package }} package
+      ansible.builtin.dnf:
+        name: "{{ db_package }}"
+        state: present
+
+
+

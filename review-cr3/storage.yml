@@ -1,0 +1,23 @@
+---
+- name: Configure storage on webservers
+  hosts: webservers
+
+  roles:
+    - name: redhat.rhel_system_roles.storage
+      storage_pools:
+        - name: vg_web
+          type: lvm
+          disks:
+            - /dev/vdb
+          volumes:
+            - name: lv_content
+              size: 128m
+              mount_point: "/var/www/html/content"
+              fs_type: xfs
+              state: present
+            - name: lv_uploads
+              size: 256m
+              mount_point: "/var/www/"
+              fs_type: xfs
+              state: present
+

@@ -1,0 +1,5 @@
+---
+collections:
+  - name: /home/student/role-collections/redhat-insights-1.0.7.tar.gz
+  - name: /home/student/role-collections/redhat-rhel_system_roles-1.19.3.tar.gz
+  - name: /home/student/role-collections/community-general-5.5.0.tar.gz

@@ -1,0 +1,4 @@
+---
+backup_dir: /var/lib/backup
+backup_prefix: backup-
+...

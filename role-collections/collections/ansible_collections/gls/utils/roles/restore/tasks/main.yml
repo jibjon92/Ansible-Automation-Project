@@ -1,0 +1,19 @@
+---
+- name: Checking if the backup exists
+  stat:
+    path: "{{ backup_dir }}/{{ backup_prefix }}{{ backup_id }}.tgz"
+  register: st
+
+- name: Ensure the backup is restored
+  command:
+    cmd: "tar xf {{ backup_dir }}/{{ backup_prefix }}{{ backup_id }}.tgz
+          -C / --xattrs"
+    warn: false
+  when: st.stat.exists
+
+- name: Ensure the backup is removed
+  file:
+    path: "{{ backup_dir }}/{{ backup_prefix }}{{ backup_id }}.tgz"
+    state: absent
+  when: restore_remove_after
+...

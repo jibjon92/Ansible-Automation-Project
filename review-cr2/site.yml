@@ -1,0 +1,6 @@
+---
+- name: Deploy web servers
+  ansible.builtin.import_playbook: dev_deploy.yml
+
+- name: Retrieve web content
+  ansible.builtin.import_playbook: get_web_content.yml

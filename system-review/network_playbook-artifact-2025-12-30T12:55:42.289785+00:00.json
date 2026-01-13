@@ -1,0 +1,1804 @@
+{
+    "plays": [
+        {
+            "__play_name": "NIC Configuration",
+            "name": "NIC Configuration",
+            "pattern": "webservers",
+            "play": "NIC Configuration",
+            "play_pattern": "webservers",
+            "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+            "playbook": "/home/student/system-review/network_playbook.yml",
+            "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Gathering Facts",
+                    "__task_action": "gather_facts",
+                    "duration": 1.595131,
+                    "end": "2025-12-30T12:55:34.039294",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "res": {
+                        "_ansible_no_log": null,
+                        "_ansible_verbose_override": true,
+                        "ansible_facts": {
+                            "ansible_all_ipv4_addresses": [
+                                "172.25.250.11"
+                            ],
+                            "ansible_all_ipv6_addresses": [
+                                "fe80::6da3:a05d:aa7b:751b"
+                            ],
+                            "ansible_apparmor": {
+                                "status": "disabled"
+                            },
+                            "ansible_architecture": "x86_64",
+                            "ansible_bios_date": "04/01/2014",
+                            "ansible_bios_vendor": "SeaBIOS",
+                            "ansible_bios_version": "1.14.0-1.module+el8.4.0+8855+a9e237a9",
+                            "ansible_board_asset_tag": "NA",
+                            "ansible_board_name": "NA",
+                            "ansible_board_serial": "NA",
+                            "ansible_board_vendor": "NA",
+                            "ansible_board_version": "NA",
+                            "ansible_chassis_asset_tag": "NA",
+                            "ansible_chassis_serial": "NA",
+                            "ansible_chassis_vendor": "Red Hat",
+                            "ansible_chassis_version": "RHEL 7.6.0 PC (i440FX + PIIX, 1996)",
+                            "ansible_cmdline": {
+                                "BOOT_IMAGE": "(hd0,gpt3)/vmlinuz-5.14.0-70.13.1.el9_0.x86_64",
+                                "console": "ttyS0,115200n8",
+                                "crashkernel": "1G-4G:192M,4G-64G:256M,64G-:512M",
+                                "net.ifnames": "0",
+                                "no_timer_check": true,
+                                "root": "UUID=fb535add-9799-4a27-b8bc-e8259f39a767"
+                            },
+                            "ansible_date_time": {
+                                "date": "2025-12-30",
+                                "day": "30",
+                                "epoch": "1767099333",
+                                "epoch_int": "1767099333",
+                                "hour": "07",
+                                "iso8601": "2025-12-30T12:55:33Z",
+                                "iso8601_basic": "20251230T075533569852",
+                                "iso8601_basic_short": "20251230T075533",
+                                "iso8601_micro": "2025-12-30T12:55:33.569852Z",
+                                "minute": "55",
+                                "month": "12",
+                                "second": "33",
+                                "time": "07:55:33",
+                                "tz": "EST",
+                                "tz_dst": "EDT",
+                                "tz_offset": "-0500",
+                                "weekday": "Tuesday",
+                                "weekday_number": "2",
+                                "weeknumber": "52",
+                                "year": "2025"
+                            },
+                            "ansible_default_ipv4": {
+                                "address": "172.25.250.11",
+                                "alias": "eth0",
+                                "broadcast": "172.25.250.255",
+                                "gateway": "172.25.250.254",
+                                "interface": "eth0",
+                                "macaddress": "52:54:00:00:fa:0b",
+                                "mtu": 1500,
+                                "netmask": "255.255.255.0",
+                                "network": "172.25.250.0",
+                                "prefix": "24",
+                                "type": "ether"
+                            },
+                            "ansible_default_ipv6": {},
+                            "ansible_device_links": {
+                                "ids": {
+                                    "dm-0": [
+                                        "dm-name-apache--vg-logs--lv",
+                                        "dm-uuid-LVM-RIRvdQNstcn59Q60SRzTefO4guhgXa0jc0r2MDpWFR8Y4pZTbI8lS56ONnSamFST"
+                                    ],
+                                    "dm-1": [
+                                        "dm-name-apache--vg-content--lv",
+                                        "dm-uuid-LVM-RIRvdQNstcn59Q60SRzTefO4guhgXa0jY42IjZoNTmwUIHX5LofogFnrdS1lwzTw"
+                                    ],
+                                    "vda": [
+                                        "virtio-f6e7b16d-b36b-4ed8-8"
+                                    ],
+                                    "vda1": [
+                                        "virtio-f6e7b16d-b36b-4ed8-8-part1"
+                                    ],
+                                    "vda2": [
+                                        "virtio-f6e7b16d-b36b-4ed8-8-part2"
+                                    ],
+                                    "vda3": [
+                                        "virtio-f6e7b16d-b36b-4ed8-8-part3"
+                                    ],
+                                    "vda4": [
+                                        "virtio-f6e7b16d-b36b-4ed8-8-part4"
+                                    ],
+                                    "vdb": [
+                                        "lvm-pv-uuid-hiBmHi-9pMF-76ew-0j4G-sA9d-KJ9I-KnjphA",
+                                        "virtio-cfa68104-27f1-4a4e-9"
+                                    ]
+                                },
+                                "labels": {
+                                    "vda3": [
+                                        "boot"
+                                    ],
+                                    "vda4": [
+                                        "root"
+                                    ]
+                                },
+                                "masters": {
+                                    "vdb": [
+                                        "dm-0",
+                                        "dm-1"
+                                    ]
+                                },
+                                "uuids": {
+                                    "dm-0": [
+                                        "013fde3c-851c-41d8-b7f1-5c8d80347202"
+                                    ],
+                                    "dm-1": [
+                                        "124d4356-358b-4404-ba74-17d4b4a8897c"
+                                    ],
+                                    "vda2": [
+                                        "7B77-95E7"
+                                    ],
+                                    "vda3": [
+                                        "5e75a2b9-1367-4cc8-bb38-4d6abc3964b8"
+                                    ],
+                                    "vda4": [
+                                        "fb535add-9799-4a27-b8bc-e8259f39a767"
+                                    ]
+                                }
+                            },
+                            "ansible_devices": {
+                                "dm-0": {
+                                    "holders": [],
+                                    "host": "",
+                                    "links": {
+                                        "ids": [
+                                            "dm-name-apache--vg-logs--lv",
+                                            "dm-uuid-LVM-RIRvdQNstcn59Q60SRzTefO4guhgXa0jc0r2MDpWFR8Y4pZTbI8lS56ONnSamFST"
+                                        ],
+                                        "labels": [],
+                                        "masters": [],
+                                        "uuids": [
+                                            "013fde3c-851c-41d8-b7f1-5c8d80347202"
+                                        ]
+                                    },
+                                    "model": null,
+                                    "partitions": {},
+                                    "removable": "0",
+                                    "rotational": "1",
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "scheduler_mode": "",
+                                    "sectors": "262144",
+                                    "sectorsize": "512",
+                                    "size": "128.00 MB",
+                                    "support_discard": "0",
+                                    "vendor": null,
+                                    "virtual": 1
+                                },
+                                "dm-1": {
+                                    "holders": [],
+                                    "host": "",
+                                    "links": {
+                                        "ids": [
+                                            "dm-name-apache--vg-content--lv",
+                                            "dm-uuid-LVM-RIRvdQNstcn59Q60SRzTefO4guhgXa0jY42IjZoNTmwUIHX5LofogFnrdS1lwzTw"
+                                        ],
+                                        "labels": [],
+                                        "masters": [],
+                                        "uuids": [
+                                            "124d4356-358b-4404-ba74-17d4b4a8897c"
+                                        ]
+                                    },
+                                    "model": null,
+                                    "partitions": {},
+                                    "removable": "0",
+                                    "rotational": "1",
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "scheduler_mode": "",
+                                    "sectors": "131072",
+                                    "sectorsize": "512",
+                                    "size": "64.00 MB",
+                                    "support_discard": "0",
+                                    "vendor": null,
+                                    "virtual": 1
+                                },
+                                "vda": {
+                                    "holders": [],
+                                    "host": "SCSI storage controller: Red Hat, Inc. Virtio block device",
+                                    "links": {
+                                        "ids": [
+                                            "virtio-f6e7b16d-b36b-4ed8-8"
+                                        ],
+                                        "labels": [],
+                                        "masters": [],
+                                        "uuids": []
+                                    },
+                                    "model": null,
+                                    "partitions": {
+                                        "vda1": {
+                                            "holders": [],
+                                            "links": {
+                                                "ids": [
+                                                    "virtio-f6e7b16d-b36b-4ed8-8-part1"
+                                                ],
+                                                "labels": [],
+                                                "masters": [],
+                                                "uuids": []
+                                            },
+                                            "sectors": "2048",
+                                            "sectorsize": 512,
+                                            "size": "1.00 MB",
+                                            "start": "2048",
+                                            "uuid": null
+                                        },
+                                        "vda2": {
+                                            "holders": [],
+                                            "links": {
+                                                "ids": [
+                                                    "virtio-f6e7b16d-b36b-4ed8-8-part2"
+                                                ],
+                                                "labels": [],
+                                                "masters": [],
+                                                "uuids": [
+                                                    "7B77-95E7"
+                                                ]
+                                            },
+                                            "sectors": "409600",
+                                            "sectorsize": 512,
+                                            "size": "200.00 MB",
+                                            "start": "4096",
+                                            "uuid": "7B77-95E7"
+                                        },
+                                        "vda3": {
+                                            "holders": [],
+                                            "links": {
+                                                "ids": [
+                                                    "virtio-f6e7b16d-b36b-4ed8-8-part3"
+                                                ],
+                                                "labels": [
+                                                    "boot"
+                                                ],
+                                                "masters": [],
+                                                "uuids": [
+                                                    "5e75a2b9-1367-4cc8-bb38-4d6abc3964b8"
+                                                ]
+                                            },
+                                            "sectors": "1024000",
+                                            "sectorsize": 512,
+                                            "size": "500.00 MB",
+                                            "start": "413696",
+                                            "uuid": "5e75a2b9-1367-4cc8-bb38-4d6abc3964b8"
+                                        },
+                                        "vda4": {
+                                            "holders": [],
+                                            "links": {
+                                                "ids": [
+                                                    "virtio-f6e7b16d-b36b-4ed8-8-part4"
+                                                ],
+                                                "labels": [
+                                                    "root"
+                                                ],
+                                                "masters": [],
+                                                "uuids": [
+                                                    "fb535add-9799-4a27-b8bc-e8259f39a767"
+                                                ]
+                                            },
+                                            "sectors": "19533791",
+                                            "sectorsize": 512,
+                                            "size": "9.31 GB",
+                                            "start": "1437696",
+                                            "uuid": "fb535add-9799-4a27-b8bc-e8259f39a767"
+                                        }
+                                    },
+                                    "removable": "0",
+                                    "rotational": "1",
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "scheduler_mode": "mq-deadline",
+                                    "sectors": "20971520",
+                                    "sectorsize": "512",
+                                    "size": "10.00 GB",
+                                    "support_discard": "0",
+                                    "vendor": "0x1af4",
+                                    "virtual": 1
+                                },
+                                "vdb": {
+                                    "holders": [
+                                        "apache--vg-content--lv",
+                                        "apache--vg-logs--lv"
+                                    ],
+                                    "host": "SCSI storage controller: Red Hat, Inc. Virtio block device",
+                                    "links": {
+                                        "ids": [
+                                            "lvm-pv-uuid-hiBmHi-9pMF-76ew-0j4G-sA9d-KJ9I-KnjphA",
+                                            "virtio-cfa68104-27f1-4a4e-9"
+                                        ],
+                                        "labels": [],
+                                        "masters": [
+                                            "dm-0",
+                                            "dm-1"
+                                        ],
+                                        "uuids": []
+                                    },
+                                    "model": null,
+                                    "partitions": {},
+                                    "removable": "0",
+                                    "rotational": "1",
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "scheduler_mode": "mq-deadline",
+                                    "sectors": "2097152",
+                                    "sectorsize": "512",
+                                    "size": "1.00 GB",
+                                    "support_discard": "0",
+                                    "vendor": "0x1af4",
+                                    "virtual": 1
+                                }
+                            },
+                            "ansible_distribution": "RedHat",
+                            "ansible_distribution_file_parsed": true,
+                            "ansible_distribution_file_path": "/etc/redhat-release",
+                            "ansible_distribution_file_search_string": "Red Hat",
+                            "ansible_distribution_file_variety": "RedHat",
+                            "ansible_distribution_major_version": "9",
+                            "ansible_distribution_release": "Plow",
+                            "ansible_distribution_version": "9.0",
+                            "ansible_dns": {
+                                "nameservers": [
+                                    "172.25.250.220"
+                                ],
+                                "search": [
+                                    "lab.example.com",
+                                    "example.com"
+                                ]
+                            },
+                            "ansible_domain": "lab.example.com",
+                            "ansible_effective_group_id": 0,
+                            "ansible_effective_user_id": 0,
+                            "ansible_eth0": {
+                                "active": true,
+                                "device": "eth0",
+                                "features": {
+                                    "esp_hw_offload": "off [fixed]",
+                                    "esp_tx_csum_hw_offload": "off [fixed]",
+                                    "fcoe_mtu": "off [fixed]",
+                                    "generic_receive_offload": "on",
+                                    "generic_segmentation_offload": "on",
+                                    "highdma": "on [fixed]",
+                                    "hsr_dup_offload": "off [fixed]",
+                                    "hsr_fwd_offload": "off [fixed]",
+                                    "hsr_tag_ins_offload": "off [fixed]",
+                                    "hsr_tag_rm_offload": "off [fixed]",
+                                    "hw_tc_offload": "off [fixed]",
+                                    "l2_fwd_offload": "off [fixed]",
+                                    "large_receive_offload": "off [fixed]",
+                                    "loopback": "off [fixed]",
+                                    "macsec_hw_offload": "off [fixed]",
+                                    "netns_local": "off [fixed]",
+                                    "ntuple_filters": "off [fixed]",
+                                    "receive_hashing": "off [fixed]",
+                                    "rx_all": "off [fixed]",
+                                    "rx_checksumming": "on [fixed]",
+                                    "rx_fcs": "off [fixed]",
+                                    "rx_gro_hw": "on",
+                                    "rx_gro_list": "off",
+                                    "rx_udp_gro_forwarding": "off",
+                                    "rx_udp_tunnel_port_offload": "off [fixed]",
+                                    "rx_vlan_filter": "on [fixed]",
+                                    "rx_vlan_offload": "off [fixed]",
+                                    "rx_vlan_stag_filter": "off [fixed]",
+                                    "rx_vlan_stag_hw_parse": "off [fixed]",
+                                    "scatter_gather": "on",
+                                    "tcp_segmentation_offload": "on",
+                                    "tls_hw_record": "off [fixed]",
+                                    "tls_hw_rx_offload": "off [fixed]",
+                                    "tls_hw_tx_offload": "off [fixed]",
+                                    "tx_checksum_fcoe_crc": "off [fixed]",
+                                    "tx_checksum_ip_generic": "on",
+                                    "tx_checksum_ipv4": "off [fixed]",
+                                    "tx_checksum_ipv6": "off [fixed]",
+                                    "tx_checksum_sctp": "off [fixed]",
+                                    "tx_checksumming": "on",
+                                    "tx_esp_segmentation": "off [fixed]",
+                                    "tx_fcoe_segmentation": "off [fixed]",
+                                    "tx_gre_csum_segmentation": "off [fixed]",
+                                    "tx_gre_segmentation": "off [fixed]",
+                                    "tx_gso_list": "off [fixed]",
+                                    "tx_gso_partial": "off [fixed]",
+                                    "tx_gso_robust": "on [fixed]",
+                                    "tx_ipxip4_segmentation": "off [fixed]",
+                                    "tx_ipxip6_segmentation": "off [fixed]",
+                                    "tx_lockless": "off [fixed]",
+                                    "tx_nocache_copy": "off",
+                                    "tx_scatter_gather": "on",
+                                    "tx_scatter_gather_fraglist": "off [fixed]",
+                                    "tx_sctp_segmentation": "off [fixed]",
+                                    "tx_tcp6_segmentation": "on",
+                                    "tx_tcp_ecn_segmentation": "on",
+                                    "tx_tcp_mangleid_segmentation": "off",
+                                    "tx_tcp_segmentation": "on",
+                                    "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                                    "tx_udp_segmentation": "off [fixed]",
+                                    "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                                    "tx_udp_tnl_segmentation": "off [fixed]",
+                                    "tx_vlan_offload": "off [fixed]",
+                                    "tx_vlan_stag_hw_insert": "off [fixed]",
+                                    "vlan_challenged": "off [fixed]"
+                                },
+                                "hw_timestamp_filters": [],
+                                "ipv4": {
+                                    "address": "172.25.250.11",
+                                    "broadcast": "172.25.250.255",
+                                    "netmask": "255.255.255.0",
+                                    "network": "172.25.250.0",
+                                    "prefix": "24"
+                                },
+                                "ipv6": [
+                                    {
+                                        "address": "fe80::6da3:a05d:aa7b:751b",
+                                        "prefix": "64",
+                                        "scope": "link"
+                                    }
+                                ],
+                                "macaddress": "52:54:00:00:fa:0b",
+                                "module": "virtio_net",
+                                "mtu": 1500,
+                                "pciid": "virtio0",
+                                "promisc": false,
+                                "speed": -1,
+                                "timestamping": [],
+                                "type": "ether"
+                            },
+                            "ansible_eth1": {
+                                "active": true,
+                                "device": "eth1",
+                                "features": {
+                                    "esp_hw_offload": "off [fixed]",
+                                    "esp_tx_csum_hw_offload": "off [fixed]",
+                                    "fcoe_mtu": "off [fixed]",
+                                    "generic_receive_offload": "on",
+                                    "generic_segmentation_offload": "on",
+                                    "highdma": "on [fixed]",
+                                    "hsr_dup_offload": "off [fixed]",
+                                    "hsr_fwd_offload": "off [fixed]",
+                                    "hsr_tag_ins_offload": "off [fixed]",
+                                    "hsr_tag_rm_offload": "off [fixed]",
+                                    "hw_tc_offload": "off [fixed]",
+                                    "l2_fwd_offload": "off [fixed]",
+                                    "large_receive_offload": "off [fixed]",
+                                    "loopback": "off [fixed]",
+                                    "macsec_hw_offload": "off [fixed]",
+                                    "netns_local": "off [fixed]",
+                                    "ntuple_filters": "off [fixed]",
+                                    "receive_hashing": "off [fixed]",
+                                    "rx_all": "off [fixed]",
+                                    "rx_checksumming": "on [fixed]",
+                                    "rx_fcs": "off [fixed]",
+                                    "rx_gro_hw": "on",
+                                    "rx_gro_list": "off",
+                                    "rx_udp_gro_forwarding": "off",
+                                    "rx_udp_tunnel_port_offload": "off [fixed]",
+                                    "rx_vlan_filter": "on [fixed]",
+                                    "rx_vlan_offload": "off [fixed]",
+                                    "rx_vlan_stag_filter": "off [fixed]",
+                                    "rx_vlan_stag_hw_parse": "off [fixed]",
+                                    "scatter_gather": "on",
+                                    "tcp_segmentation_offload": "on",
+                                    "tls_hw_record": "off [fixed]",
+                                    "tls_hw_rx_offload": "off [fixed]",
+                                    "tls_hw_tx_offload": "off [fixed]",
+                                    "tx_checksum_fcoe_crc": "off [fixed]",
+                                    "tx_checksum_ip_generic": "on",
+                                    "tx_checksum_ipv4": "off [fixed]",
+                                    "tx_checksum_ipv6": "off [fixed]",
+                                    "tx_checksum_sctp": "off [fixed]",
+                                    "tx_checksumming": "on",
+                                    "tx_esp_segmentation": "off [fixed]",
+                                    "tx_fcoe_segmentation": "off [fixed]",
+                                    "tx_gre_csum_segmentation": "off [fixed]",
+                                    "tx_gre_segmentation": "off [fixed]",
+                                    "tx_gso_list": "off [fixed]",
+                                    "tx_gso_partial": "off [fixed]",
+                                    "tx_gso_robust": "on [fixed]",
+                                    "tx_ipxip4_segmentation": "off [fixed]",
+                                    "tx_ipxip6_segmentation": "off [fixed]",
+                                    "tx_lockless": "off [fixed]",
+                                    "tx_nocache_copy": "off",
+                                    "tx_scatter_gather": "on",
+                                    "tx_scatter_gather_fraglist": "off [fixed]",
+                                    "tx_sctp_segmentation": "off [fixed]",
+                                    "tx_tcp6_segmentation": "on",
+                                    "tx_tcp_ecn_segmentation": "on",
+                                    "tx_tcp_mangleid_segmentation": "off",
+                                    "tx_tcp_segmentation": "on",
+                                    "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                                    "tx_udp_segmentation": "off [fixed]",
+                                    "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                                    "tx_udp_tnl_segmentation": "off [fixed]",
+                                    "tx_vlan_offload": "off [fixed]",
+                                    "tx_vlan_stag_hw_insert": "off [fixed]",
+                                    "vlan_challenged": "off [fixed]"
+                                },
+                                "hw_timestamp_filters": [],
+                                "macaddress": "52:54:00:01:fa:28",
+                                "module": "virtio_net",
+                                "mtu": 1500,
+                                "pciid": "virtio1",
+                                "promisc": false,
+                                "speed": -1,
+                                "timestamping": [],
+                                "type": "ether"
+                            },
+                            "ansible_fibre_channel_wwn": [],
+                            "ansible_fips": false,
+                            "ansible_form_factor": "Other",
+                            "ansible_fqdn": "serverb.lab.example.com",
+                            "ansible_hostname": "serverb",
+                            "ansible_hostnqn": "nqn.2014-08.org.nvmexpress:uuid:70ba7a79-d9fe-4ef9-9b40-3ee8778e8398",
+                            "ansible_interfaces": [
+                                "eth0",
+                                "eth1",
+                                "lo"
+                            ],
+                            "ansible_is_chroot": false,
+                            "ansible_iscsi_iqn": "",
+                            "ansible_kernel": "5.14.0-70.13.1.el9_0.x86_64",
+                            "ansible_kernel_version": "#1 SMP PREEMPT Thu Apr 14 12:42:38 EDT 2022",
+                            "ansible_lo": {
+                                "active": true,
+                                "device": "lo",
+                                "features": {
+                                    "esp_hw_offload": "off [fixed]",
+                                    "esp_tx_csum_hw_offload": "off [fixed]",
+                                    "fcoe_mtu": "off [fixed]",
+                                    "generic_receive_offload": "on",
+                                    "generic_segmentation_offload": "on",
+                                    "highdma": "on [fixed]",
+                                    "hsr_dup_offload": "off [fixed]",
+                                    "hsr_fwd_offload": "off [fixed]",
+                                    "hsr_tag_ins_offload": "off [fixed]",
+                                    "hsr_tag_rm_offload": "off [fixed]",
+                                    "hw_tc_offload": "off [fixed]",
+                                    "l2_fwd_offload": "off [fixed]",
+                                    "large_receive_offload": "off [fixed]",
+                                    "loopback": "on [fixed]",
+                                    "macsec_hw_offload": "off [fixed]",
+                                    "netns_local": "on [fixed]",
+                                    "ntuple_filters": "off [fixed]",
+                                    "receive_hashing": "off [fixed]",
+                                    "rx_all": "off [fixed]",
+                                    "rx_checksumming": "on [fixed]",
+                                    "rx_fcs": "off [fixed]",
+                                    "rx_gro_hw": "off [fixed]",
+                                    "rx_gro_list": "off",
+                                    "rx_udp_gro_forwarding": "off",
+                                    "rx_udp_tunnel_port_offload": "off [fixed]",
+                                    "rx_vlan_filter": "off [fixed]",
+                                    "rx_vlan_offload": "off [fixed]",
+                                    "rx_vlan_stag_filter": "off [fixed]",
+                                    "rx_vlan_stag_hw_parse": "off [fixed]",
+                                    "scatter_gather": "on",
+                                    "tcp_segmentation_offload": "on",
+                                    "tls_hw_record": "off [fixed]",
+                                    "tls_hw_rx_offload": "off [fixed]",
+                                    "tls_hw_tx_offload": "off [fixed]",
+                                    "tx_checksum_fcoe_crc": "off [fixed]",
+                                    "tx_checksum_ip_generic": "on [fixed]",
+                                    "tx_checksum_ipv4": "off [fixed]",
+                                    "tx_checksum_ipv6": "off [fixed]",
+                                    "tx_checksum_sctp": "on [fixed]",
+                                    "tx_checksumming": "on",
+                                    "tx_esp_segmentation": "off [fixed]",
+                                    "tx_fcoe_segmentation": "off [fixed]",
+                                    "tx_gre_csum_segmentation": "off [fixed]",
+                                    "tx_gre_segmentation": "off [fixed]",
+                                    "tx_gso_list": "on",
+                                    "tx_gso_partial": "off [fixed]",
+                                    "tx_gso_robust": "off [fixed]",
+                                    "tx_ipxip4_segmentation": "off [fixed]",
+                                    "tx_ipxip6_segmentation": "off [fixed]",
+                                    "tx_lockless": "on [fixed]",
+                                    "tx_nocache_copy": "off [fixed]",
+                                    "tx_scatter_gather": "on [fixed]",
+                                    "tx_scatter_gather_fraglist": "on [fixed]",
+                                    "tx_sctp_segmentation": "on",
+                                    "tx_tcp6_segmentation": "on",
+                                    "tx_tcp_ecn_segmentation": "on",
+                                    "tx_tcp_mangleid_segmentation": "on",
+                                    "tx_tcp_segmentation": "on",
+                                    "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                                    "tx_udp_segmentation": "on",
+                                    "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                                    "tx_udp_tnl_segmentation": "off [fixed]",
+                                    "tx_vlan_offload": "off [fixed]",
+                                    "tx_vlan_stag_hw_insert": "off [fixed]",
+                                    "vlan_challenged": "on [fixed]"
+                                },
+                                "hw_timestamp_filters": [],
+                                "ipv4": {
+                                    "address": "127.0.0.1",
+                                    "broadcast": "",
+                                    "netmask": "255.0.0.0",
+                                    "network": "127.0.0.0",
+                                    "prefix": "8"
+                                },
+                                "ipv6": [
+                                    {
+                                        "address": "::1",
+                                        "prefix": "128",
+                                        "scope": "host"
+                                    }
+                                ],
+                                "mtu": 65536,
+                                "promisc": false,
+                                "timestamping": [],
+                                "type": "loopback"
+                            },
+                            "ansible_local": {},
+                            "ansible_lsb": {},
+                            "ansible_lvm": {
+                                "lvs": {
+                                    "content-lv": {
+                                        "size_g": "0.06",
+                                        "vg": "apache-vg"
+                                    },
+                                    "logs-lv": {
+                                        "size_g": "0.12",
+                                        "vg": "apache-vg"
+                                    }
+                                },
+                                "pvs": {
+                                    "/dev/vdb": {
+                                        "free_g": "0.81",
+                                        "size_g": "1.00",
+                                        "vg": "apache-vg"
+                                    }
+                                },
+                                "vgs": {
+                                    "apache-vg": {
+                                        "free_g": "0.81",
+                                        "num_lvs": "2",
+                                        "num_pvs": "1",
+                                        "size_g": "1.00"
+                                    }
+                                }
+                            },
+                            "ansible_machine": "x86_64",
+                            "ansible_machine_id": "90315cb0342c42e2ad7fe5299c4ca1d5",
+                            "ansible_memfree_mb": 343,
+                            "ansible_memory_mb": {
+                                "nocache": {
+                                    "free": 610,
+                                    "used": 350
+                                },
+                                "real": {
+                                    "free": 343,
+                                    "total": 960,
+                                    "used": 617
+                                },
+                                "swap": {
+                                    "cached": 0,
+                                    "free": 0,
+                                    "total": 0,
+                                    "used": 0
+                                }
+                            },
+                            "ansible_memtotal_mb": 960,
+                            "ansible_mounts": [
+                                {
+                                    "block_available": 1915861,
+                                    "block_size": 4096,
+                                    "block_total": 2439163,
+                                    "block_used": 523302,
+                                    "device": "/dev/vda4",
+                                    "fstype": "xfs",
+                                    "inode_available": 4831049,
+                                    "inode_total": 4883392,
+                                    "inode_used": 52343,
+                                    "mount": "/",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                                    "size_available": 7847366656,
+                                    "size_total": 9990811648,
+                                    "uuid": "fb535add-9799-4a27-b8bc-e8259f39a767"
+                                },
+                                {
+                                    "block_available": 85683,
+                                    "block_size": 4096,
+                                    "block_total": 126632,
+                                    "block_used": 40949,
+                                    "device": "/dev/vda3",
+                                    "fstype": "xfs",
+                                    "inode_available": 255693,
+                                    "inode_total": 256000,
+                                    "inode_used": 307,
+                                    "mount": "/boot",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                                    "size_available": 350957568,
+                                    "size_total": 518684672,
+                                    "uuid": "5e75a2b9-1367-4cc8-bb38-4d6abc3964b8"
+                                },
+                                {
+                                    "block_available": 49358,
+                                    "block_size": 4096,
+                                    "block_total": 51145,
+                                    "block_used": 1787,
+                                    "device": "/dev/vda2",
+                                    "fstype": "vfat",
+                                    "inode_available": 0,
+                                    "inode_total": 0,
+                                    "inode_used": 0,
+                                    "mount": "/boot/efi",
+                                    "options": "rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=winnt,errors=remount-ro",
+                                    "size_available": 202170368,
+                                    "size_total": 209489920,
+                                    "uuid": "7B77-95E7"
+                                },
+                                {
+                                    "block_available": 14023,
+                                    "block_size": 4096,
+                                    "block_total": 15016,
+                                    "block_used": 993,
+                                    "device": "/dev/mapper/apache--vg-content--lv",
+                                    "fstype": "xfs",
+                                    "inode_available": 32765,
+                                    "inode_total": 32768,
+                                    "inode_used": 3,
+                                    "mount": "/var/www",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                                    "size_available": 57438208,
+                                    "size_total": 61505536,
+                                    "uuid": "124d4356-358b-4404-ba74-17d4b4a8897c"
+                                },
+                                {
+                                    "block_available": 29476,
+                                    "block_size": 4096,
+                                    "block_total": 31400,
+                                    "block_used": 1924,
+                                    "device": "/dev/mapper/apache--vg-logs--lv",
+                                    "fstype": "xfs",
+                                    "inode_available": 65533,
+                                    "inode_total": 65536,
+                                    "inode_used": 3,
+                                    "mount": "/var/log/httpd",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                                    "size_available": 120733696,
+                                    "size_total": 128614400,
+                                    "uuid": "013fde3c-851c-41d8-b7f1-5c8d80347202"
+                                }
+                            ],
+                            "ansible_nodename": "serverb.lab.example.com",
+                            "ansible_os_family": "RedHat",
+                            "ansible_pkg_mgr": "dnf",
+                            "ansible_proc_cmdline": {
+                                "BOOT_IMAGE": "(hd0,gpt3)/vmlinuz-5.14.0-70.13.1.el9_0.x86_64",
+                                "console": [
+                                    "tty0",
+                                    "ttyS0,115200n8"
+                                ],
+                                "crashkernel": "1G-4G:192M,4G-64G:256M,64G-:512M",
+                                "net.ifnames": "0",
+                                "no_timer_check": true,
+                                "root": "UUID=fb535add-9799-4a27-b8bc-e8259f39a767"
+                            },
+                            "ansible_processor": [
+                                "0",
+                                "GenuineIntel",
+                                "Intel(R) Xeon(R) Platinum 8168 CPU @ 2.70GHz"
+                            ],
+                            "ansible_processor_cores": 1,
+                            "ansible_processor_count": 1,
+                            "ansible_processor_nproc": 1,
+                            "ansible_processor_threads_per_core": 1,
+                            "ansible_processor_vcpus": 1,
+                            "ansible_product_name": "OpenStack Compute",
+                            "ansible_product_serial": "10c75165-b82d-4d1e-9cd8-2719b562d48c",
+                            "ansible_product_uuid": "10c75165-b82d-4d1e-9cd8-2719b562d48c",
+                            "ansible_product_version": "20.6.2-2.20250612154931.8a24acd.el8ost",
+                            "ansible_python": {
+                                "executable": "/usr/bin/python3",
+                                "has_sslcontext": true,
+                                "type": "cpython",
+                                "version": {
+                                    "major": 3,
+                                    "micro": 10,
+                                    "minor": 9,
+                                    "releaselevel": "final",
+                                    "serial": 0
+                                },
+                                "version_info": [
+                                    3,
+                                    9,
+                                    10,
+                                    "final",
+                                    0
+                                ]
+                            },
+                            "ansible_python_version": "3.9.10",
+                            "ansible_real_group_id": 0,
+                            "ansible_real_user_id": 0,
+                            "ansible_selinux": {
+                                "config_mode": "enforcing",
+                                "mode": "enforcing",
+                                "policyvers": 33,
+                                "status": "enabled",
+                                "type": "targeted"
+                            },
+                            "ansible_selinux_python_present": true,
+                            "ansible_service_mgr": "systemd",
+                            "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCS8A5ZVCNeibYgG2JlhzCLq3RVHdXmhNCBEGiQ+5ywTj/127AS5gu8ZGLzyMp6K1J4woTWHS4RfZzvycmC8vto=",
+                            "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256",
+                            "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIOmiLKMExRnsS1g7OTxMsOmgHuUSGQBUxHhuUGcv19uT",
+                            "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
+                            "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQC8WDOooY+rh6NPa9yhLsNQXBqcQknTL/WSd3zPvHLLd7KaC4IiEUxnwbfLBit8tRcirbQFxO20Am+6WJ2kpo34ZnlQYJz3AulZjuvat7x9DxzQ2duSwSUbLtqteMtl3vS7RPUZlSnGQKuPrkcLrWYZDQveC11efyBhyskjJYPXu7Csd3iA2EmtcNa10AUoK0f2XQC7R9wSb5D1md1JvaavQ107YFlzDHppRncWI51PwbyICaCVq7Kv4LdrcmQfsAyobPizWgp7u3Ui/Narxk7ev58tmBmI3nxnC6Fiec60zqhbWrnFI062kV9p+YWHOExjLEY1WRRJGJ26dAyfief2dp6uza+LHG88Nfo0j3m3PlxW+AvM9eeboJEu+h7KfqWlXr2zrSs7pdFBpM3f7+dEG9uaWaeznUc7N9XFXh+keVxBJZK4PUy5u2Ytqv9Fm4WNvpnvXSmav9lfevtZFe2XFj9RcVqTrUFJ7Zz/87V2JCmSILGNbzR9z9mhcHRMtxc=",
+                            "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa",
+                            "ansible_swapfree_mb": 0,
+                            "ansible_swaptotal_mb": 0,
+                            "ansible_system": "Linux",
+                            "ansible_system_capabilities": [],
+                            "ansible_system_capabilities_enforced": "False",
+                            "ansible_system_vendor": "Red Hat",
+                            "ansible_uptime_seconds": 2662,
+                            "ansible_user_dir": "/root",
+                            "ansible_user_gecos": "root",
+                            "ansible_user_gid": 0,
+                            "ansible_user_id": "root",
+                            "ansible_user_shell": "/bin/bash",
+                            "ansible_user_uid": 0,
+                            "ansible_userspace_architecture": "x86_64",
+                            "ansible_userspace_bits": "64",
+                            "ansible_virtualization_role": "guest",
+                            "ansible_virtualization_tech_guest": [
+                                "openstack"
+                            ],
+                            "ansible_virtualization_tech_host": [
+                                "kvm"
+                            ],
+                            "ansible_virtualization_type": "openstack",
+                            "discovered_interpreter_python": "/usr/bin/python3",
+                            "gather_subset": [
+                                "all"
+                            ],
+                            "module_setup": true
+                        },
+                        "changed": false,
+                        "deprecations": [],
+                        "warnings": []
+                    },
+                    "resolved_action": "ansible.builtin.gather_facts",
+                    "start": "2025-12-30T12:55:32.444163",
+                    "task": "Gathering Facts",
+                    "task_action": "gather_facts",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/network_playbook.yml:2",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000020",
+                    "uuid": "03bf0738-5891-4493-b7da-be41d27d8044"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 1,
+                    "__result": "Ok",
+                    "__task": "Ensure ansible_facts used by role",
+                    "__task_action": "include_tasks",
+                    "duration": 0.008449,
+                    "end": "2025-12-30T12:55:34.070768",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "res": {
+                        "changed": false,
+                        "include": "tasks/set_facts.yml",
+                        "include_args": {}
+                    },
+                    "resolved_action": null,
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:34.062319",
+                    "task": "Ensure ansible_facts used by role",
+                    "task_action": "include_tasks",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:4",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-00000000000b",
+                    "uuid": "4958622c-90fa-45fe-a098-9cbdf6c650d5"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 2,
+                    "__result": "Ok",
+                    "__task": "Ensure ansible_facts used by role are present",
+                    "__task_action": "setup",
+                    "duration": 0.565737,
+                    "end": "2025-12-30T12:55:34.664157",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "res": {
+                        "censored": "the output has been hidden due to the fact that 'no_log: true' was specified for this result",
+                        "changed": false
+                    },
+                    "resolved_action": "ansible.builtin.setup",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:34.098420",
+                    "task": "Ensure ansible_facts used by role are present",
+                    "task_action": "setup",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/set_facts.yml:3",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000057",
+                    "uuid": "621f3f38-0272-40d0-90a9-fb1ca43b19f6"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 3,
+                    "__result": "Ok",
+                    "__task": "Check which services are running",
+                    "__task_action": "service_facts",
+                    "duration": 2.428572,
+                    "end": "2025-12-30T12:55:37.106555",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "res": {
+                        "censored": "the output has been hidden due to the fact that 'no_log: true' was specified for this result",
+                        "changed": false
+                    },
+                    "resolved_action": "ansible.builtin.service_facts",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:34.677983",
+                    "task": "Check which services are running",
+                    "task_action": "service_facts",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/set_facts.yml:9",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000058",
+                    "uuid": "5696281a-f8ed-40cd-8d12-3c2cbd77224a"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 4,
+                    "__result": "Ok",
+                    "__task": "Check which packages are installed",
+                    "__task_action": "package_facts",
+                    "duration": 1.201353,
+                    "end": "2025-12-30T12:55:38.324630",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "res": {
+                        "censored": "the output has been hidden due to the fact that 'no_log: true' was specified for this result",
+                        "changed": false
+                    },
+                    "resolved_action": "ansible.builtin.package_facts",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:37.123277",
+                    "task": "Check which packages are installed",
+                    "task_action": "package_facts",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/set_facts.yml:14",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000059",
+                    "uuid": "28000481-4332-400b-b52c-9a2e6a2969e8"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 5,
+                    "__result": "Ok",
+                    "__task": "Print network provider",
+                    "__task_action": "debug",
+                    "duration": 0.039275,
+                    "end": "2025-12-30T12:55:38.429443",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "res": {
+                        "_ansible_no_log": null,
+                        "_ansible_verbose_always": true,
+                        "changed": false,
+                        "msg": "Using network provider: nm"
+                    },
+                    "resolved_action": "ansible.builtin.debug",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:38.390168",
+                    "task": "Print network provider",
+                    "task_action": "debug",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:7",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-00000000000c",
+                    "uuid": "4b5b4d42-2d9d-4f93-9cb6-3362c76308e2"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 6,
+                    "__result": "Skipped",
+                    "__task": "Abort applying the network state configuration if using the `network_state` variable with the initscripts provider",
+                    "__task_action": "fail",
+                    "duration": 0.026693,
+                    "end": "2025-12-30T12:55:38.492453",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "resolved_action": "ansible.builtin.fail",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:38.465760",
+                    "task": "Abort applying the network state configuration if using the `network_state` variable with the initscripts provider",
+                    "task_action": "fail",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:11",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-00000000000d",
+                    "uuid": "abe00cf1-1b1e-4cd0-828d-a6b20f736a40"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 7,
+                    "__result": "Skipped",
+                    "__task": "Abort applying the network state configuration if the system version of the managed host is below 8",
+                    "__task_action": "fail",
+                    "duration": 0.017455,
+                    "end": "2025-12-30T12:55:38.545473",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "resolved_action": "ansible.builtin.fail",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:38.528018",
+                    "task": "Abort applying the network state configuration if the system version of the managed host is below 8",
+                    "task_action": "fail",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:18",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-00000000000e",
+                    "uuid": "cb673d41-c329-4657-bc5f-df092b4a60f9"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 8,
+                    "__result": "Skipped",
+                    "__task": "Install packages",
+                    "__task_action": "package",
+                    "duration": 0.066839,
+                    "end": "2025-12-30T12:55:38.647071",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "resolved_action": "ansible.builtin.package",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:38.580232",
+                    "task": "Install packages",
+                    "task_action": "package",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:27",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-00000000000f",
+                    "uuid": "b24e930b-d364-4dab-8d97-c4098da1eae4"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 9,
+                    "__result": "Skipped",
+                    "__task": "Install NetworkManager and nmstate when using network_state variable",
+                    "__task_action": "package",
+                    "duration": 0.018328,
+                    "end": "2025-12-30T12:55:38.700320",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "resolved_action": "ansible.builtin.package",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:38.681992",
+                    "task": "Install NetworkManager and nmstate when using network_state variable",
+                    "task_action": "package",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:35",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000010",
+                    "uuid": "7defaa8d-8b12-4719-b9af-016c2cf28496"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 10,
+                    "__result": "Skipped",
+                    "__task": "Install python3-libnmstate when using network_state variable",
+                    "__task_action": "package",
+                    "duration": 0.017671,
+                    "end": "2025-12-30T12:55:38.752796",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "resolved_action": "ansible.builtin.package",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:38.735125",
+                    "task": "Install python3-libnmstate when using network_state variable",
+                    "task_action": "package",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:45",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000011",
+                    "uuid": "a1ca73bf-e3b8-4da0-9703-bf3ba73de585"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 11,
+                    "__result": "Skipped",
+                    "__task": "Restart NetworkManager due to wireless or team interfaces",
+                    "__task_action": "service",
+                    "duration": 0.032432,
+                    "end": "2025-12-30T12:55:38.821122",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "resolved_action": "ansible.builtin.service",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:38.788690",
+                    "task": "Restart NetworkManager due to wireless or team interfaces",
+                    "task_action": "service",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:56",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000012",
+                    "uuid": "1b420cfa-5581-4e79-b411-ae86f627723e"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 12,
+                    "__result": "Ok",
+                    "__task": "Enable and start NetworkManager",
+                    "__task_action": "service",
+                    "duration": 0.939782,
+                    "end": "2025-12-30T12:55:39.795108",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "res": {
+                        "censored": "the output has been hidden due to the fact that 'no_log: true' was specified for this result",
+                        "changed": false
+                    },
+                    "resolved_action": "ansible.builtin.service",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:38.855326",
+                    "task": "Enable and start NetworkManager",
+                    "task_action": "service",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:69",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000013",
+                    "uuid": "8c1c18d9-f3b0-4640-987a-5233b5248ec9"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 13,
+                    "__result": "Skipped",
+                    "__task": "Enable and start wpa_supplicant",
+                    "__task_action": "service",
+                    "duration": 0.04483,
+                    "end": "2025-12-30T12:55:39.915079",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "resolved_action": "ansible.builtin.service",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:39.870249",
+                    "task": "Enable and start wpa_supplicant",
+                    "task_action": "service",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:80",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000014",
+                    "uuid": "ddea86c6-10c5-483b-a852-f41871041c59"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 14,
+                    "__result": "Skipped",
+                    "__task": "Enable network service",
+                    "__task_action": "service",
+                    "duration": 0.025222,
+                    "end": "2025-12-30T12:55:39.973860",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "resolved_action": "ansible.builtin.service",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:39.948638",
+                    "task": "Enable network service",
+                    "task_action": "service",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:89",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000015",
+                    "uuid": "25a16c60-422a-4f70-aa1c-0d20434640b3"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 15,
+                    "__result": "Skipped",
+                    "__task": "Ensure initscripts network file dependency is present",
+                    "__task_action": "copy",
+                    "duration": 0.02569,
+                    "end": "2025-12-30T12:55:40.035390",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "resolved_action": "ansible.builtin.copy",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:40.009700",
+                    "task": "Ensure initscripts network file dependency is present",
+                    "task_action": "copy",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:97",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000016",
+                    "uuid": "042c8eed-34a3-485c-9ade-508af30f78a8"
+                },
+                {
+                    "__changed": true,
+                    "__duration": "1s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 16,
+                    "__result": "Ok",
+                    "__task": "Configure networking connection profiles",
+                    "__task_action": "redhat.rhel_system_roles.network_connections",
+                    "duration": 0.867841,
+                    "end": "2025-12-30T12:55:40.936652",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "res": {
+                        "_ansible_no_log": null,
+                        "_invocation": {
+                            "module_args": {
+                                "__debug_flags": "",
+                                "__header": "#\n# Ansible managed\n#\n",
+                                "connections": [
+                                    {
+                                        "ip": {
+                                            "address": [
+                                                "172.25.250.40/24"
+                                            ]
+                                        },
+                                        "name": "eth1",
+                                        "type": "ethernet"
+                                    }
+                                ],
+                                "force_state_change": false,
+                                "ignore_errors": false,
+                                "provider": "nm"
+                            }
+                        },
+                        "changed": true,
+                        "invocation": {
+                            "module_args": {
+                                "__debug_flags": "",
+                                "__header": "#\n# Ansible managed\n#\n",
+                                "connections": [
+                                    {
+                                        "ip": {
+                                            "address": [
+                                                "172.25.250.40/24"
+                                            ]
+                                        },
+                                        "name": "eth1",
+                                        "type": "ethernet"
+                                    }
+                                ],
+                                "force_state_change": false,
+                                "ignore_errors": false,
+                                "provider": "nm"
+                            }
+                        },
+                        "stderr": "[002] <info>  #0, state:None persistent_state:present, 'eth1': add connection eth1, 2ae30383-d5f2-47e0-b3f1-b6642dca43a8\n",
+                        "stderr_lines": [
+                            "[002] <info>  #0, state:None persistent_state:present, 'eth1': add connection eth1, 2ae30383-d5f2-47e0-b3f1-b6642dca43a8"
+                        ]
+                    },
+                    "resolved_action": "redhat.rhel_system_roles.network_connections",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:40.068811",
+                    "task": "Configure networking connection profiles",
+                    "task_action": "redhat.rhel_system_roles.network_connections",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:106",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000017",
+                    "uuid": "9dfe0803-8ce2-400d-9e08-517c8ac9e793"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 17,
+                    "__result": "Skipped",
+                    "__task": "Configure networking state",
+                    "__task_action": "redhat.rhel_system_roles.network_state",
+                    "duration": 0.018485,
+                    "end": "2025-12-30T12:55:40.989981",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "resolved_action": "redhat.rhel_system_roles.network_state",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:40.971496",
+                    "task": "Configure networking state",
+                    "task_action": "redhat.rhel_system_roles.network_state",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:118",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000018",
+                    "uuid": "2eaedb3a-80e0-4e14-9229-6d3af2f1de5d"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 18,
+                    "__result": "Ok",
+                    "__task": "Show stderr messages for the network_connections",
+                    "__task_action": "debug",
+                    "duration": 0.028428,
+                    "end": "2025-12-30T12:55:41.052229",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "res": {
+                        "__network_connections_result.stderr_lines": [
+                            "[002] <info>  #0, state:None persistent_state:present, 'eth1': add connection eth1, 2ae30383-d5f2-47e0-b3f1-b6642dca43a8"
+                        ],
+                        "_ansible_no_log": null,
+                        "_ansible_verbose_always": true,
+                        "changed": false
+                    },
+                    "resolved_action": "ansible.builtin.debug",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:41.023801",
+                    "task": "Show stderr messages for the network_connections",
+                    "task_action": "debug",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:124",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-000000000019",
+                    "uuid": "6bdbd599-bad3-41f8-95f4-ce5f5e97a6c1"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 19,
+                    "__result": "Skipped",
+                    "__task": "Show debug messages for the network_connections",
+                    "__task_action": "debug",
+                    "duration": 0.027089,
+                    "end": "2025-12-30T12:55:41.112817",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "resolved_action": "ansible.builtin.debug",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:41.085728",
+                    "task": "Show debug messages for the network_connections",
+                    "task_action": "debug",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:128",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-00000000001a",
+                    "uuid": "70228eba-160c-4900-bd00-83a7cde4bf7f"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 20,
+                    "__result": "Skipped",
+                    "__task": "Show debug messages for the network_state",
+                    "__task_action": "debug",
+                    "duration": 0.018363,
+                    "end": "2025-12-30T12:55:41.165264",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "resolved_action": "ansible.builtin.debug",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:41.146901",
+                    "task": "Show debug messages for the network_state",
+                    "task_action": "debug",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:133",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-00000000001b",
+                    "uuid": "e9283a08-17ce-48a9-8916-e3c09bf06346"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 21,
+                    "__result": "Ok",
+                    "__task": "Re-test connectivity",
+                    "__task_action": "ping",
+                    "duration": 0.580271,
+                    "end": "2025-12-30T12:55:41.780040",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "play": "NIC Configuration",
+                    "play_pattern": "webservers",
+                    "play_uuid": "f6e42dbd-1931-2e06-8b1a-000000000006",
+                    "playbook": "/home/student/system-review/network_playbook.yml",
+                    "playbook_uuid": "cdc8bec1-3f39-45c6-bfe6-74d3c4158fa6",
+                    "remote_addr": "serverb.lab.example.com",
+                    "res": {
+                        "_ansible_no_log": null,
+                        "changed": false,
+                        "invocation": {
+                            "module_args": {
+                                "data": "pong"
+                            }
+                        },
+                        "ping": "pong"
+                    },
+                    "resolved_action": "ansible.builtin.ping",
+                    "resolved_role": "redhat.rhel_system_roles.network",
+                    "role": "network",
+                    "start": "2025-12-30T12:55:41.199769",
+                    "task": "Re-test connectivity",
+                    "task_action": "ping",
+                    "task_args": "",
+                    "task_path": "/home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/main.yml:139",
+                    "task_uuid": "f6e42dbd-1931-2e06-8b1a-00000000001c",
+                    "uuid": "01eb038a-6ada-4eb2-8bcc-f93fdac65e08"
+                }
+            ],
+            "uuid": "f6e42dbd-1931-2e06-8b1a-000000000006"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/home/student/system-review/inventory"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/student/system-review/network_playbook.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/student/system-review"
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/student/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "utility.lab.example.com/ee-supported-rhel8:latest",
+                "pull": {
+                    "policy": "missing"
+                }
+            },
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/student/system-review/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Not set",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Ansible configuration file",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Automatically determined",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Defaults",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Settings file",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Settings file",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "/home/student/.ansible-navigator.yml",
+        "settings_file_source": "Search path"
+    },
+    "status": "successful",
+    "status_color": 10,
+    "stdout": [
+        "",
+        "PLAY [NIC Configuration] *******************************************************",
+        "",
+        "TASK [Gathering Facts] *********************************************************",
+        "\u001b[0;32mok: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Ensure ansible_facts used by role] ****",
+        "\u001b[0;36mincluded: /home/student/system-review/collections/ansible_collections/redhat/rhel_system_roles/roles/network/tasks/set_facts.yml for serverb.lab.example.com\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Ensure ansible_facts used by role are present] ***",
+        "\u001b[0;32mok: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Check which services are running] *****",
+        "\u001b[0;32mok: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Check which packages are installed] ***",
+        "\u001b[0;32mok: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Print network provider] ***************",
+        "\u001b[0;32mok: [serverb.lab.example.com] => {\u001b[0m",
+        "\u001b[0;32m    \"msg\": \"Using network provider: nm\"\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Abort applying the network state configuration if using the `network_state` variable with the initscripts provider] ***",
+        "\u001b[0;36mskipping: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Abort applying the network state configuration if the system version of the managed host is below 8] ***",
+        "\u001b[0;36mskipping: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Install packages] *********************",
+        "\u001b[0;36mskipping: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Install NetworkManager and nmstate when using network_state variable] ***",
+        "\u001b[0;36mskipping: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Install python3-libnmstate when using network_state variable] ***",
+        "\u001b[0;36mskipping: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Restart NetworkManager due to wireless or team interfaces] ***",
+        "\u001b[0;36mskipping: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Enable and start NetworkManager] ******",
+        "\u001b[0;32mok: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Enable and start wpa_supplicant] ******",
+        "\u001b[0;36mskipping: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Enable network service] ***************",
+        "\u001b[0;36mskipping: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Ensure initscripts network file dependency is present] ***",
+        "\u001b[0;36mskipping: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Configure networking connection profiles] ***",
+        "\u001b[0;33mchanged: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Configure networking state] ***********",
+        "\u001b[0;36mskipping: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Show stderr messages for the network_connections] ***",
+        "\u001b[0;32mok: [serverb.lab.example.com] => {\u001b[0m",
+        "\u001b[0;32m    \"__network_connections_result.stderr_lines\": [\u001b[0m",
+        "\u001b[0;32m        \"[002] <info>  #0, state:None persistent_state:present, 'eth1': add connection eth1, 2ae30383-d5f2-47e0-b3f1-b6642dca43a8\"\u001b[0m",
+        "\u001b[0;32m    ]\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Show debug messages for the network_connections] ***",
+        "\u001b[0;36mskipping: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Show debug messages for the network_state] ***",
+        "\u001b[0;36mskipping: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "TASK [redhat.rhel_system_roles.network : Re-test connectivity] *****************",
+        "\u001b[0;32mok: [serverb.lab.example.com]\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;33mserverb.lab.example.com\u001b[0m    : \u001b[0;32mok=10  \u001b[0m \u001b[0;33mchanged=1   \u001b[0m unreachable=0    failed=0    \u001b[0;36mskipped=12  \u001b[0m rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}

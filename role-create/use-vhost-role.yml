@@ -1,0 +1,20 @@
+---
+- name: Use myvhost role playbook
+  hosts: servera.lab.example.com
+  pre_tasks:
+    - name: pre_tasks message
+      ansible.builtin.debug:
+        msg: 'Ensure web server configuration.'
+
+  roles:
+    - myvhost
+
+  post_tasks:
+    - name: HTML content is installed
+      ansible.builtin.copy:
+        src: files/html/
+        dest: "/var/www/vhosts/{{ ansible_hostname }}"
+
+    - name: post_tasks message
+      ansible.builtin.debug:
+        msg: 'Web server is configured.'

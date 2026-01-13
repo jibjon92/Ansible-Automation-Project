@@ -1,0 +1,230 @@
+{
+    "plays": [
+        {
+            "__play_name": "Install a samba server",
+            "name": "Install a samba server",
+            "pattern": "samba_servers",
+            "play": "Install a samba server",
+            "play_pattern": "samba_servers",
+            "play_uuid": "7229bf6b-b0d8-0c37-7e8b-000000000007",
+            "playbook": "/home/student/troubleshoot-host/samba.yml",
+            "playbook_uuid": "f6a05dd0-0e02-4a11-a03d-6608711493a5",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "20s",
+                    "__host": "servera.lab.exammple.com",
+                    "__number": 0,
+                    "__result": "Unreachable",
+                    "__task": "Gathering Facts",
+                    "__task_action": "gather_facts",
+                    "duration": 20.060579,
+                    "end": "2025-12-25T21:45:11.732263",
+                    "host": "servera.lab.exammple.com",
+                    "play": "Install a samba server",
+                    "play_pattern": "samba_servers",
+                    "play_uuid": "7229bf6b-b0d8-0c37-7e8b-000000000007",
+                    "playbook": "/home/student/troubleshoot-host/samba.yml",
+                    "playbook_uuid": "f6a05dd0-0e02-4a11-a03d-6608711493a5",
+                    "remote_addr": "servera.lab.exammple.com",
+                    "res": {
+                        "changed": false,
+                        "msg": "Failed to connect to the host via ssh: OpenSSH_8.0p1, OpenSSL 1.1.1k  FIPS 25 Mar 2021\r\ndebug1: Reading configuration data /home/runner/.ssh/config\r\ndebug1: /home/runner/.ssh/config line 1: Applying options for *\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug3: /etc/ssh/ssh_config line 52: Including file /etc/ssh/ssh_config.d/05-redhat.conf depth 0\r\ndebug1: Reading configuration data /etc/ssh/ssh_config.d/05-redhat.conf\r\ndebug2: checking match for 'final all' host servera.lab.exammple.com originally servera.lab.exammple.com\r\ndebug3: /etc/ssh/ssh_config.d/05-redhat.conf line 3: not matched 'final'\r\ndebug2: match not found\r\ndebug3: /etc/ssh/ssh_config.d/05-redhat.conf line 5: Including file /etc/crypto-policies/back-ends/openssh.config depth 1 (parse only)\r\ndebug1: Reading configuration data /etc/crypto-policies/back-ends/openssh.config\r\ndebug3: gss kex names ok: [gss-curve25519-sha256-,gss-nistp256-sha256-,gss-group14-sha256-,gss-group16-sha512-,gss-gex-sha1-,gss-group14-sha1-]\r\ndebug3: kex names ok: [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1]\r\ndebug1: configuration requests final Match pass\r\ndebug1: re-parsing configuration\r\ndebug1: Reading configuration data /home/runner/.ssh/config\r\ndebug1: /home/runner/.ssh/config line 1: Applying options for *\r\ndebug2: add_identity_file: ignoring duplicate key ~/.ssh/lab_rsa\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug3: /etc/ssh/ssh_config line 52: Including file /etc/ssh/ssh_config.d/05-redhat.conf depth 0\r\ndebug1: Reading configuration data /etc/ssh/ssh_config.d/05-redhat.conf\r\ndebug2: checking match for 'final all' host servera.lab.exammple.com originally servera.lab.exammple.com\r\ndebug3: /etc/ssh/ssh_config.d/05-redhat.conf line 3: matched 'final'\r\ndebug2: match found\r\ndebug3: /etc/ssh/ssh_config.d/05-redhat.conf line 5: Including file /etc/crypto-policies/back-ends/openssh.config depth 1\r\ndebug1: Reading configuration data /etc/crypto-policies/back-ends/openssh.config\r\ndebug3: gss kex names ok: [gss-curve25519-sha256-,gss-nistp256-sha256-,gss-group14-sha256-,gss-group16-sha512-,gss-gex-sha1-,gss-group14-sha1-]\r\ndebug3: kex names ok: [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1]\r\ndebug1: auto-mux: Trying existing master\r\ndebug1: Control socket \"/home/runner/.ansible/cp/d4775f48c9\" does not exist\r\ndebug2: resolving \"servera.lab.exammple.com\" port 22\r\ndebug2: ssh_connect_direct\r\ndebug1: Connecting to servera.lab.exammple.com [54.243.117.197] port 22.\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug1: connect to address 54.243.117.197 port 22: Connection timed out\r\ndebug1: Connecting to servera.lab.exammple.com [13.223.25.84] port 22.\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug1: connect to address 13.223.25.84 port 22: Connection timed out\r\ndebug1: Connecting to servera.lab.exammple.com [2600:1f18:4ae:c605:dd5d:b838:5816:d7fb] port 22.\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug1: connect to address 2600:1f18:4ae:c605:dd5d:b838:5816:d7fb port 22: Network is unreachable\r\ndebug1: Connecting to servera.lab.exammple.com [2600:1f18:4ae:c606:78d4:4260:db4e:aeee] port 22.\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug1: connect to address 2600:1f18:4ae:c606:78d4:4260:db4e:aeee port 22: Network is unreachable\r\nssh: connect to host servera.lab.exammple.com port 22: Network is unreachable",
+                        "unreachable": true
+                    },
+                    "resolved_action": "ansible.builtin.gather_facts",
+                    "start": "2025-12-25T21:44:51.671684",
+                    "task": "Gathering Facts",
+                    "task_action": "gather_facts",
+                    "task_args": "",
+                    "task_path": "/home/student/troubleshoot-host/samba.yml:2",
+                    "task_uuid": "7229bf6b-b0d8-0c37-7e8b-000000000013",
+                    "uuid": "af690664-f0f9-454e-8cd1-82a0af91c643"
+                }
+            ],
+            "uuid": "7229bf6b-b0d8-0c37-7e8b-000000000007"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "cmdline": "-vvvv",
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/home/student/troubleshoot-host/inventory"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/student/troubleshoot-host/samba.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/student/troubleshoot-host"
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/student/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "utility.lab.example.com/ee-supported-rhel8:latest",
+                "pull": {
+                    "policy": "missing"
+                }
+            },
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/student/troubleshoot-host/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Command line",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Ansible configuration file",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Automatically determined",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Defaults",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Settings file",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Settings file",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "/home/student/.ansible-navigator.yml",
+        "settings_file_source": "Search path"
+    },
+    "status": "failed",
+    "status_color": 9,
+    "stdout": [
+        "\u001b[0;34mansible-playbook [core 2.13.3]\u001b[0m",
+        "\u001b[0;34m  config file = /home/student/troubleshoot-host/ansible.cfg\u001b[0m",
+        "\u001b[0;34m  configured module search path = ['/home/runner/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']\u001b[0m",
+        "\u001b[0;34m  ansible python module location = /usr/lib/python3.9/site-packages/ansible\u001b[0m",
+        "\u001b[0;34m  ansible collection location = /home/runner/.ansible/collections:/usr/share/ansible/collections\u001b[0m",
+        "\u001b[0;34m  executable location = /usr/bin/ansible-playbook\u001b[0m",
+        "\u001b[0;34m  python version = 3.9.7 (default, Sep 13 2021, 08:18:39) [GCC 8.5.0 20210514 (Red Hat 8.5.0-3)]\u001b[0m",
+        "\u001b[0;34m  jinja version = 3.0.3\u001b[0m",
+        "\u001b[0;34m  libyaml = True\u001b[0m",
+        "\u001b[0;34mUsing /home/student/troubleshoot-host/ansible.cfg as config file\u001b[0m",
+        "\u001b[0;34msetting up inventory plugins\u001b[0m",
+        "\u001b[0;34mhost_list declined parsing /home/student/troubleshoot-host/inventory as it did not pass its verify_file() method\u001b[0m",
+        "\u001b[0;34mscript declined parsing /home/student/troubleshoot-host/inventory as it did not pass its verify_file() method\u001b[0m",
+        "\u001b[0;34mauto declined parsing /home/student/troubleshoot-host/inventory as it did not pass its verify_file() method\u001b[0m",
+        "\u001b[0;34mParsed /home/student/troubleshoot-host/inventory inventory source with ini plugin\u001b[0m",
+        "\u001b[0;34mLoading collection ansible.posix from /usr/share/ansible/collections/ansible_collections/ansible/posix\u001b[0m",
+        "\u001b[0;34mLoading callback plugin default of type stdout, v2.0 from /usr/lib/python3.9/site-packages/ansible/plugins/callback/default.py\u001b[0m",
+        "\u001b[0;34mLoading callback plugin awx_display of type stdout, v2.0 from /home/runner/.ansible/plugins/callback/awx_display.py\u001b[0m",
+        "\u001b[0;34mSkipping callback 'awx_display', as we already have a stdout callback.\u001b[0m",
+        "\u001b[0;34mSkipping callback 'default', as we already have a stdout callback.\u001b[0m",
+        "\u001b[0;34mSkipping callback 'minimal', as we already have a stdout callback.\u001b[0m",
+        "\u001b[0;34mSkipping callback 'oneline', as we already have a stdout callback.\u001b[0m",
+        "",
+        "PLAYBOOK: samba.yml ************************************************************",
+        "\u001b[0;34mPositional arguments: /home/student/troubleshoot-host/samba.yml\u001b[0m",
+        "\u001b[0;34mverbosity: 4\u001b[0m",
+        "\u001b[0;34mremote_user: devops\u001b[0m",
+        "\u001b[0;34mconnection: smart\u001b[0m",
+        "\u001b[0;34mtimeout: 10\u001b[0m",
+        "\u001b[0;34mbecome: True\u001b[0m",
+        "\u001b[0;34mbecome_method: sudo\u001b[0m",
+        "\u001b[0;34mtags: ('all',)\u001b[0m",
+        "\u001b[0;34minventory: ('/home/student/troubleshoot-host/inventory',)\u001b[0m",
+        "\u001b[0;34mforks: 5\u001b[0m",
+        "\u001b[0;34m1 plays in /home/student/troubleshoot-host/samba.yml\u001b[0m",
+        "",
+        "PLAY [Install a samba server] **************************************************",
+        "",
+        "TASK [Gathering Facts] *********************************************************",
+        "\u001b[1;30mtask path: /home/student/troubleshoot-host/samba.yml:2\u001b[0m",
+        "\u001b[0;34m<servera.lab.exammple.com> ESTABLISH SSH CONNECTION FOR USER: devops\u001b[0m",
+        "\u001b[0;34m<servera.lab.exammple.com> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User=\"devops\"' -o ConnectTimeout=10 -o 'ControlPath=\"/home/runner/.ansible/cp/d4775f48c9\"' servera.lab.exammple.com '/bin/sh -c '\"'\"'echo ~devops && sleep 0'\"'\"''\u001b[0m",
+        "\u001b[0;34m<servera.lab.exammple.com> (255, b'', b'OpenSSH_8.0p1, OpenSSL 1.1.1k  FIPS 25 Mar 2021\\r\\ndebug1: Reading configuration data /home/runner/.ssh/config\\r\\ndebug1: /home/runner/.ssh/config line 1: Applying options for *\\r\\ndebug1: Reading configuration data /etc/ssh/ssh_config\\r\\ndebug3: /etc/ssh/ssh_config line 52: Including file /etc/ssh/ssh_config.d/05-redhat.conf depth 0\\r\\ndebug1: Reading configuration data /etc/ssh/ssh_config.d/05-redhat.conf\\r\\ndebug2: checking match for \\'final all\\' host servera.lab.exammple.com originally servera.lab.exammple.com\\r\\ndebug3: /etc/ssh/ssh_config.d/05-redhat.conf line 3: not matched \\'final\\'\\r\\ndebug2: match not found\\r\\ndebug3: /etc/ssh/ssh_config.d/05-redhat.conf line 5: Including file /etc/crypto-policies/back-ends/openssh.config depth 1 (parse only)\\r\\ndebug1: Reading configuration data /etc/crypto-policies/back-ends/openssh.config\\r\\ndebug3: gss kex names ok: [gss-curve25519-sha256-,gss-nistp256-sha256-,gss-group14-sha256-,gss-group16-sha512-,gss-gex-sha1-,gss-group14-sha1-]\\r\\ndebug3: kex names ok: [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1]\\r\\ndebug1: configuration requests final Match pass\\r\\ndebug1: re-parsing configuration\\r\\ndebug1: Reading configuration data /home/runner/.ssh/config\\r\\ndebug1: /home/runner/.ssh/config line 1: Applying options for *\\r\\ndebug2: add_identity_file: ignoring duplicate key ~/.ssh/lab_rsa\\r\\ndebug1: Reading configuration data /etc/ssh/ssh_config\\r\\ndebug3: /etc/ssh/ssh_config line 52: Including file /etc/ssh/ssh_config.d/05-redhat.conf depth 0\\r\\ndebug1: Reading configuration data /etc/ssh/ssh_config.d/05-redhat.conf\\r\\ndebug2: checking match for \\'final all\\' host servera.lab.exammple.com originally servera.lab.exammple.com\\r\\ndebug3: /etc/ssh/ssh_config.d/05-redhat.conf line 3: matched \\'final\\'\\r\\ndebug2: match found\\r\\ndebug3: /etc/ssh/ssh_config.d/05-redhat.conf line 5: Including file /etc/crypto-policies/back-ends/openssh.config depth 1\\r\\ndebug1: Reading configuration data /etc/crypto-policies/back-ends/openssh.config\\r\\ndebug3: gss kex names ok: [gss-curve25519-sha256-,gss-nistp256-sha256-,gss-group14-sha256-,gss-group16-sha512-,gss-gex-sha1-,gss-group14-sha1-]\\r\\ndebug3: kex names ok: [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1]\\r\\ndebug1: auto-mux: Trying existing master\\r\\ndebug1: Control socket \"/home/runner/.ansible/cp/d4775f48c9\" does not exist\\r\\ndebug2: resolving \"servera.lab.exammple.com\" port 22\\r\\ndebug2: ssh_connect_direct\\r\\ndebug1: Connecting to servera.lab.exammple.com [54.243.117.197] port 22.\\r\\ndebug2: fd 3 setting O_NONBLOCK\\r\\ndebug1: connect to address 54.243.117.197 port 22: Connection timed out\\r\\ndebug1: Connecting to servera.lab.exammple.com [13.223.25.84] port 22.\\r\\ndebug2: fd 3 setting O_NONBLOCK\\r\\ndebug1: connect to address 13.223.25.84 port 22: Connection timed out\\r\\ndebug1: Connecting to servera.lab.exammple.com [2600:1f18:4ae:c605:dd5d:b838:5816:d7fb] port 22.\\r\\ndebug2: fd 3 setting O_NONBLOCK\\r\\ndebug1: connect to address 2600:1f18:4ae:c605:dd5d:b838:5816:d7fb port 22: Network is unreachable\\r\\ndebug1: Connecting to servera.lab.exammple.com [2600:1f18:4ae:c606:78d4:4260:db4e:aeee] port 22.\\r\\ndebug2: fd 3 setting O_NONBLOCK\\r\\ndebug1: connect to address 2600:1f18:4ae:c606:78d4:4260:db4e:aeee port 22: Network is unreachable\\r\\nssh: connect to host servera.lab.exammple.com port 22: Network is unreachable\\r\\n')\u001b[0m",
+        "\u001b[1;31mfatal: [servera.lab.exammple.com]: UNREACHABLE! => {\u001b[0m",
+        "\u001b[1;31m    \"changed\": false,\u001b[0m",
+        "\u001b[1;31m    \"msg\": \"Failed to connect to the host via ssh: OpenSSH_8.0p1, OpenSSL 1.1.1k  FIPS 25 Mar 2021\\r\\ndebug1: Reading configuration data /home/runner/.ssh/config\\r\\ndebug1: /home/runner/.ssh/config line 1: Applying options for *\\r\\ndebug1: Reading configuration data /etc/ssh/ssh_config\\r\\ndebug3: /etc/ssh/ssh_config line 52: Including file /etc/ssh/ssh_config.d/05-redhat.conf depth 0\\r\\ndebug1: Reading configuration data /etc/ssh/ssh_config.d/05-redhat.conf\\r\\ndebug2: checking match for 'final all' host servera.lab.exammple.com originally servera.lab.exammple.com\\r\\ndebug3: /etc/ssh/ssh_config.d/05-redhat.conf line 3: not matched 'final'\\r\\ndebug2: match not found\\r\\ndebug3: /etc/ssh/ssh_config.d/05-redhat.conf line 5: Including file /etc/crypto-policies/back-ends/openssh.config depth 1 (parse only)\\r\\ndebug1: Reading configuration data /etc/crypto-policies/back-ends/openssh.config\\r\\ndebug3: gss kex names ok: [gss-curve25519-sha256-,gss-nistp256-sha256-,gss-group14-sha256-,gss-group16-sha512-,gss-gex-sha1-,gss-group14-sha1-]\\r\\ndebug3: kex names ok: [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1]\\r\\ndebug1: configuration requests final Match pass\\r\\ndebug1: re-parsing configuration\\r\\ndebug1: Reading configuration data /home/runner/.ssh/config\\r\\ndebug1: /home/runner/.ssh/config line 1: Applying options for *\\r\\ndebug2: add_identity_file: ignoring duplicate key ~/.ssh/lab_rsa\\r\\ndebug1: Reading configuration data /etc/ssh/ssh_config\\r\\ndebug3: /etc/ssh/ssh_config line 52: Including file /etc/ssh/ssh_config.d/05-redhat.conf depth 0\\r\\ndebug1: Reading configuration data /etc/ssh/ssh_config.d/05-redhat.conf\\r\\ndebug2: checking match for 'final all' host servera.lab.exammple.com originally servera.lab.exammple.com\\r\\ndebug3: /etc/ssh/ssh_config.d/05-redhat.conf line 3: matched 'final'\\r\\ndebug2: match found\\r\\ndebug3: /etc/ssh/ssh_config.d/05-redhat.conf line 5: Including file /etc/crypto-policies/back-ends/openssh.config depth 1\\r\\ndebug1: Reading configuration data /etc/crypto-policies/back-ends/openssh.config\\r\\ndebug3: gss kex names ok: [gss-curve25519-sha256-,gss-nistp256-sha256-,gss-group14-sha256-,gss-group16-sha512-,gss-gex-sha1-,gss-group14-sha1-]\\r\\ndebug3: kex names ok: [curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1]\\r\\ndebug1: auto-mux: Trying existing master\\r\\ndebug1: Control socket \\\"/home/runner/.ansible/cp/d4775f48c9\\\" does not exist\\r\\ndebug2: resolving \\\"servera.lab.exammple.com\\\" port 22\\r\\ndebug2: ssh_connect_direct\\r\\ndebug1: Connecting to servera.lab.exammple.com [54.243.117.197] port 22.\\r\\ndebug2: fd 3 setting O_NONBLOCK\\r\\ndebug1: connect to address 54.243.117.197 port 22: Connection timed out\\r\\ndebug1: Connecting to servera.lab.exammple.com [13.223.25.84] port 22.\\r\\ndebug2: fd 3 setting O_NONBLOCK\\r\\ndebug1: connect to address 13.223.25.84 port 22: Connection timed out\\r\\ndebug1: Connecting to servera.lab.exammple.com [2600:1f18:4ae:c605:dd5d:b838:5816:d7fb] port 22.\\r\\ndebug2: fd 3 setting O_NONBLOCK\\r\\ndebug1: connect to address 2600:1f18:4ae:c605:dd5d:b838:5816:d7fb port 22: Network is unreachable\\r\\ndebug1: Connecting to servera.lab.exammple.com [2600:1f18:4ae:c606:78d4:4260:db4e:aeee] port 22.\\r\\ndebug2: fd 3 setting O_NONBLOCK\\r\\ndebug1: connect to address 2600:1f18:4ae:c606:78d4:4260:db4e:aeee port 22: Network is unreachable\\r\\nssh: connect to host servera.lab.exammple.com port 22: Network is unreachable\",\u001b[0m",
+        "\u001b[1;31m    \"unreachable\": true\u001b[0m",
+        "\u001b[1;31m}\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;31mservera.lab.exammple.com\u001b[0m   : ok=0    changed=0    \u001b[1;31munreachable=1   \u001b[0m failed=0    skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}

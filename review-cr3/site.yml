@@ -1,0 +1,12 @@
+---
+- name: Configure storage on webservers
+  ansible.builtin.import_playbook: storage.yml
+
+- name: Create local users
+  ansible.builtin.import_playbook: dev_users.yml
+
+- name: NIC Configuration
+  ansible.builtin.import_playbook: network.yml
+
+- name: Recurring cron job
+  ansible.builtin.import_playbook: log-rotate.yml

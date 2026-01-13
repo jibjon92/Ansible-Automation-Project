@@ -1,0 +1,9 @@
+---
+- name: Validate inventory hosts
+  hosts: internetweb
+  gather_facts: false
+
+  tasks:
+
+    - name: Ping internetweb
+      ansible.builtin.ping:

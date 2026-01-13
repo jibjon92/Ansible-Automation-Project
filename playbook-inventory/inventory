@@ -1,0 +1,44 @@
+---
+all:
+  hosts:
+    servere.lab.example.com:
+  children:
+    webservers:
+      hosts:
+        servera.lab.example.com:
+        serverb.lab.example.com:
+        serverc.lab.example.com:
+        serverd.lab.example.com:
+     
+    raleigh:
+      hosts:
+        servera.lab.example.com:
+        serverb.lab.example.com:
+  
+    mountainview:
+      hosts:
+        serverc.lab.example.com:
+
+    london:
+      hosts:
+        serverd.lab.exmample.com:
+    
+    development:
+      hosts:
+        servera.lab.example.com:
+
+    testing:
+      hosts:
+        serverb.lab.example.com:
+    
+    production:
+      hosts:
+        serverc.lab.example.com:
+        serverd.lab.example.com:
+
+
+    us:
+      children:
+        raleigh:
+        mountainview:
+        
