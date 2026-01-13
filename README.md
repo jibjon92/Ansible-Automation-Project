@@ -46,8 +46,3 @@ Section	Topic	Core Properties & Modules Covered
 3. Ansible Version: 2.11+
 4. Python: 3.9+
 
-
-
-    Securely manage user accounts and system subscriptions.
-
-    Standardize software deployments across different host groups.
