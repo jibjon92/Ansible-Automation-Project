@@ -19,7 +19,7 @@ Section	Topic	Core Properties & Modules Covered
 🚀 Key Features Demonstrated
 
 1. Advanced Playbook Logic: Implementation of complex workflows using conditional execution and error handling to ensure idempotent system states.
-2.  Secret Management: Securely managing sensitive data (passwords, SSH keys) using Ansible Vault to ensure security best practices in DevOps pipelines.
+2. Secret Management: Securely managing sensitive data (passwords, SSH keys) using Ansible Vault to ensure security best practices in DevOps pipelines.
 3. Modularization with Roles: Organizing automation into reusable roles.Includes usage of RHEL System Roles to leverage Red Hat-supported automation for networking, storage, and kernel settings.
 4. Dynamic Infrastructure Configuration: Using Jinja2 templates to dynamically generate configuration files (like /etc/hosts or Apache Vhosts) based on host-specific variables.
 
