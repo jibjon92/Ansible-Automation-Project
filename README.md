@@ -24,21 +24,6 @@ Section	Topic	Core Properties & Modules Covered
 4. Dynamic Infrastructure Configuration: Using Jinja2 templates to dynamically generate configuration files (like /etc/hosts or Apache Vhosts) based on host-specific variables.
 
 
-📂 Repository Structure:
-
-.
-├── group_vars/             # Global and group-specific variables
-├── host_vars/              # Host-specific variables
-├── inventory/              # Static inventory files
-├── roles/                  # Custom Ansible Roles
-│   └── my_custom_role/     # Example: Webserver or DB setup
-├── playbooks/              # Individual lab solutions
-│   ├── install_ansible.yml
-│   ├── manage_storage.yml
-│   └── network_config.yml
-├── ansible.cfg             # Local Ansible configuration
-└── README.md
-
 💻 Environment Prerequisites
 
 1. Control Node: RHEL 8 or 9
